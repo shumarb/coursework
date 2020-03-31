@@ -10,38 +10,44 @@
 
 void calculate(int num);
 
-int main(void) {
+int main(void) 
+{
 	int num;
 	printf("Enter integer: ");
-	scanf("%d",&num);
-
+	scanf("%d", &num);
 	calculate(num);
-
+	
 	return 0;
 }
 
 // Calculate and print out num as a multiple of its primes.
 void calculate(int num){
-	int i=2;
+	int i = 2;
 	
-	if(num<0){
-		printf("%d = -1",num);
+	if(num < 0)
+	{
+		printf("%d = -1", num);
 	}
-	if(num>0){
-		printf("%d = 1",num);
+	if(num > 0)
+	{
+		printf("%d = 1", num);
 	}
 
-	if(num<0){
+	if(num < 0)
+	{
 		num*=-1;
 	}
+	
 	int k = num;
-	while(k>1){
-		while(k%i!=0){
+	
+	while(k > 1)
+	{
+		while((k % i) != 0)
+		{
 			i++;
 		}
-		k/=i;
-		printf(" * %d",i);
+		k /= i;
+		printf(" * %d", i);
 	}
 	printf("\n");
 }
-
