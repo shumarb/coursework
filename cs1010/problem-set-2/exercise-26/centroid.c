@@ -21,6 +21,7 @@ int main(void) {
 	scanf("%lf %lf", &x2, &y2);
 	printf("Coordinates of 3rd vertex: ");
 	scanf("%lf %lf", &x3, &y3);
+	
 	// make function call to centroid function
 	centroid(x1, y1, x2, y2, x3, y3, &xG, &yG);
 
