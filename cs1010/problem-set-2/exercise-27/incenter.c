@@ -58,3 +58,4 @@ double length(double x1, double y1, double x2, double y2)
 	length = sqrt(pow(x_length, 2.0) + pow(y_length, 2.0));
 	return length;  // stub
 }
+
