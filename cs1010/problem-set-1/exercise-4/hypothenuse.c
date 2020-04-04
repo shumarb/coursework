@@ -15,9 +15,8 @@ int main(void) {
 	scanf("%lf %lf", &opposite, &adjacent);
 
 	//Calculation for hypothenuse
-	hypothenuse = sqrt(pow(opposite,2)+ pow(adjacent,2));
-	printf("c = %.2lf\n",hypothenuse);
+	hypothenuse = sqrt(pow(opposite, 2)+ pow(adjacent, 2));
+	printf("c = %.2lf\n", hypothenuse);
 
 	return 0;
 }
-
