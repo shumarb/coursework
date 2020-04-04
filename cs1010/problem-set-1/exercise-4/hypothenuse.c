@@ -8,7 +8,8 @@
 #include <stdio.h>
 #include <math.h> // to use sqrt() function
 
-int main(void) {
+int main(void)
+{
 	double opposite, adjacent, hypothenuse;
 
 	printf("Enter a and b: ");
