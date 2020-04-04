@@ -8,7 +8,8 @@
 
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
 
 	int length, width, height, volume;
 
@@ -29,3 +30,4 @@ int main(void) {
 
 	return 0;
 }
+
