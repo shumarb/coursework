@@ -20,7 +20,7 @@ int main(void) {
 	printf("10%% Service Charge: $%.2lf\n", service);
 
 	// Calculate GST, make this answer into double type
-	gst = (double) (0.07 * (price + service));
+	gst = (double)(0.07 * (price + service));
 	printf("7%% GST: $%.2lf\n", gst);
 	
 	// Calculate total bill,comprising of price, service and gst
