@@ -13,10 +13,11 @@
 int get_hundredth(int num);
 
 // main function is complete
-int main(void) {
+int main(void)
+{
 
 	int num1, num2, num3;   // inputs
-	int digit;  // digit in hundredth position
+	int digit;  		// digit in hundredth position
 
 	printf("Enter 3 positive integers: ");
 	scanf("%d %d %d", &num1, &num2, &num3);
@@ -34,41 +35,50 @@ int main(void) {
 }
 
 // Take a number and return the digit in hundredth position
-int get_hundredth(int num) {
+int get_hundredth(int num)
+{
 	//Return integer if it is less than 100
-	if (num<100){
+	if (num < 100)
+	{
 		return 0;
 	}
-	//101<=num<1000
-	else if(num>=100 && num<1000){
+	
+	//101 <= num <1000
+	else if(num >= 100 && num < 1000)
+	{
 		int i;
-		i=num/100;//Divide num by 100 to its hundredth-placed digit
+		i = (num / 100);	// Divide num by 100 to its hundredth-placed digit
 		return i;
 	}
-	//1001<=num<=10000
-	else if (num>1000 && num<=10000){
+	
+	//1001 <= num <= 10000
+	else if (num > 1000 && num <= 10000)
+	{
 		int i;
-		i=num/100;//Divide num by 100 to obtain first 2 digits
+		i = (num / 100);	// Divide num by 100 to obtain first 2 digits
 		int j;
-		j=i%10;//Modulo-divide i by 10 to obtain hundredth-placed digit
+		j = (i % 10);		// Modulo-divide i by 10 to obtain hundredth-placed digit
 		return j;
 	}
+	
 	//10001<=num<100000
-	else if (num>1000 && num<=10000){
+	else if (num > 1000 && num <= 10000)
+	{
 		int i;
-		i=num/1000;//Divide num by 1000 to obtain first 2 digits
+		i = (num / 1000);	// Divide num by 1000 to obtain first 2 digits
 		int j;
-		j=i%10;//Modulo-divide i by 10 to obtain hundredth-placed digit
+		j = (i % 10);		// Modulo-divide i by 10 to obtain hundredth-placed digit
+		
 		return j;
 	}
 	//100001<num<=1000000
-	else{
+	else
+	{
 		int i;
-		i=num/10000;//Divide num by 10000 to obtain first 2 digits
+		i = (num / 10000);	// Divide num by 10000 to obtain first 2 digits
 		int j;
-		j=i%10;//Modulo-divide i by 10 to obtain hundredth-placed digit
+		j = (i % 10);		// Modulo-divide i by 10 to obtain hundredth-placed digit
 		return j;
 	}
 }	
-
 
