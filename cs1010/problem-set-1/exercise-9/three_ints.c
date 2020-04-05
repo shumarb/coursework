@@ -37,13 +37,13 @@ int main(void)
 // Take a number and return the digit in hundredth position
 int get_hundredth(int num)
 {
-	//Return integer if it is less than 100
+	// Return integer if it is less than 100
 	if (num < 100)
 	{
 		return 0;
 	}
 	
-	//101 <= num <1000
+	// 101 <= num <1000
 	else if(num >= 100 && num < 1000)
 	{
 		int i;
@@ -51,7 +51,7 @@ int get_hundredth(int num)
 		return i;
 	}
 	
-	//1001 <= num <= 10000
+	// 1001 <= num <= 10000
 	else if (num > 1000 && num <= 10000)
 	{
 		int i;
@@ -61,7 +61,7 @@ int get_hundredth(int num)
 		return j;
 	}
 	
-	//10001<=num<100000
+	// 10001<=num<100000
 	else if (num > 1000 && num <= 10000)
 	{
 		int i;
@@ -71,7 +71,7 @@ int get_hundredth(int num)
 		
 		return j;
 	}
-	//100001<num<=1000000
+	// 100001<num<=1000000
 	else
 	{
 		int i;
