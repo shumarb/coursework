@@ -17,7 +17,7 @@ int main(void) {
 	double a, b, c, root;
 
 	printf("Enter coefficients (a b c): ");
-	scanf("%lf %lf %lf",&a,&b,&c);
+	scanf("%lf %lf %lf", &a, &b, &c);
 	
 	root = get_root(a, b, c);
 
@@ -28,18 +28,21 @@ int main(void) {
 
 // Take three coefficients and return the bigger root
 double get_root(double a, double b, double c) {
-	//Declare 2 double variables as the 2 roots
-	double x1,x2;
-
-	//Use golden formula for each root
-	x1 = ((-b) + sqrt(pow(b,2)-4*a*c))/(2*a);
-	x2 = ((-b) - sqrt(pow(b,2)-4*a*c))/(2*a);
 	
-	//Compare x1 and x2, return the bigger value
-	if(x1<x2){
+	// Declare 2 double variables as the 2 roots
+	double x1, x2;
+
+	// Use golden formula for each root
+	x1 = ((-b) + sqrt(pow(b, 2) - (4 * a * c))) / (2 * a);
+	x2 = ((-b) - sqrt(pow(b, 2) - (4 * a * c))) / (2 * a);
+	
+	// Compare x1 and x2, return the bigger value
+	if(x1 < x2)
+	{
 		return x2;
 	}
-	else{
+	else
+	{
 		return x1;
 	}
 }
