@@ -37,18 +37,21 @@ int main(void) {
 
 // Take a number and return the magic digit 
 int get_magic(int num) {
-	//Obtain fifth-placed digit by modulo division
-	int fifth_digit = num%10;
-	//Obtain third-placed digit by dividing num by 100, and modulo-divide by 10
-	int third_digit = (num/100)%10;
-	//Obtain first-placed digit by integer division
-	int first_digit = num/10000;
+	
+	// Obtain fifth-placed digit by modulo division
+	int fifth_digit = num % 10;
+	
+	// Obtain third-placed digit by dividing num by 100, and modulo-divide by 10
+	int third_digit = (num / 100) % 10;
+	
+	// Obtain first-placed digit by integer division
+	int first_digit = num / 10000;
 
 	//Add the digits above to form a new number
-	int new_num = first_digit+third_digit+fifth_digit;
+	int new_num = first_digit + third_digit + fifth_digit;
 
 	//Obtain last digit of new number by modulo division
-	int magic_digit= new_num%10;
+	int magic_digit = new_num % 10;
 
 	//Return magic_digit to main function
 	return magic_digit;
