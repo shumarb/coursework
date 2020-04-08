@@ -30,16 +30,16 @@ int main(void) {
 	printf("Enter X Y coordinates for NTUC: ");
 	scanf("%lf %lf", &x3, &y3);
 	
-	//Calculate distance from Home to Office
+	// Calculate distance from Home to Office
 	first_distance = distance(x1, y1, x2, y2);
 	
-	//Calculate distance from Office to NTUC
+	// Calculate distance from Office to NTUC
 	second_distance = distance(x2, y2, x3, y3);
 
-	//Calculate distance from NTUC to Home
+	// Calculate distance from NTUC to Home
 	third_distance = distance(x3, y3, x1, y1);
 
-	//Calculate total distance
+	// Calculate total distance
 	total = first_distance + second_distance + third_distance;
 	printf("Distance of travel is %.2lf\n", total);
 
