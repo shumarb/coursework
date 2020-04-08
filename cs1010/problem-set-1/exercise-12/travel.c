@@ -15,10 +15,10 @@
 double distance(double x1, double y1, double x2, double y2);
 
 int main(void) {
-	double x1, y1;	//Coordinates for Home
-	double x2, y2;	//Coordinates for Office
-	double x3, y3;	//Coordinates for NTUC
-	double total;	//Total distance travelled
+	double x1, y1;	// Coordinates for Home
+	double x2, y2;	// Coordinates for Office
+	double x3, y3;	// Coordinates for NTUC
+	double total;	// Total distance travelled
 	double first_distance, second_distance, third_distance;
 
 	printf("Enter X Y coordinates for Home: ");
