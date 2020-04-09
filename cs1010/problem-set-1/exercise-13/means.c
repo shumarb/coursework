@@ -37,7 +37,6 @@ double compute_AM(int a, int b, int c) {
 
 // Compute geometric mean
 double compute_GM(int a, int b, int c) {
-	
 	double geometric;
 	
 	// Calculate value of geometric mean
