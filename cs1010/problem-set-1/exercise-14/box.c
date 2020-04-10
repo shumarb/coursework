@@ -4,7 +4,6 @@
 // Program takes in the length, width, height of a box
 // and computes its surface area and diagonal using
 // 2 separate functions
-// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>
