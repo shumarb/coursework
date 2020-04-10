@@ -51,7 +51,6 @@ double compute_diagonal(int length, int width, int height) {
 	// and the height of the box as the adjacent.
 	// Find the measurement of the diagonal of a square box with dimensions of the width and length first.
 	// Then use Pythagoras Theorem with the available values to find the measurement of the diagonal.
-	
 	double c = pow(length, 2) + pow(width, 2);
 	double diagonal = sqrt(pow(height, 2) + c);
 	
