@@ -1,4 +1,3 @@
-
 // CS1010 Programming Methodology
 // Problem Set 1 Exercise #17: leap_year.c
 //
