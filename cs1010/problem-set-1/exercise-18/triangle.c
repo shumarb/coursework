@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int length1,length2,length3;
+	int length1, length2, length3;
 	scanf("%d %d %d", &length1, &length2, &length3);
 
 	// Condition for equilateral triangle
@@ -31,7 +31,7 @@ int main(void)
 	}
 	
 	// Condition for not a triangle: any 1 length is greater than or equal to the sum of the other 2
-	else if( (length1 >= (length2 + length3)) || (length2 >= (length1 + length3)) || (length3 >= (length2 + length1)))
+	else if( (length1 >= (length2 + length3)) || (length2 >= (length1 + length3)) || (length3 >= (length2 + length1)) )
 	{
 		printf("Not a triangle\n");
 	}
