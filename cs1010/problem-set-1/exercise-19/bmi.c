@@ -52,7 +52,8 @@ int body_type(int gender, double weight, double height)
 	int weight_class;
 
 	// Assign weight class for female
-	if(gender == 0){
+	if(gender == 0)
+	{
 		// If bmi is less than or equal to 19, weight class is underweight
 		if(bmi <= 19.00)
 		{
