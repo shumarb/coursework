@@ -62,7 +62,7 @@ int compute_percentile(int verbal, int maths, int writing)
 
 	else if (score >= 2000 && score < 2200)
 	{
-		percentile=95;
+		percentile = 95;
 	}
 	
 	else
