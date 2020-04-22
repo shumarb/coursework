@@ -14,7 +14,8 @@
 // function prototype
 double distance(double x1, double y1, double x2, double y2);
 
-int main(void) {
+int main(void) 
+{
 	double x1, y1;	// Coordinates for Home
 	double x2, y2;	// Coordinates for Office
 	double x3, y3;	// Coordinates for NTUC
@@ -40,14 +41,15 @@ int main(void) {
 	third_distance = distance(x3, y3, x1, y1);
 
 	// Calculate total distance
-	total = first_distance + second_distance + third_distance;
+	total = (first_distance + second_distance + third_distance);
 	printf("Distance of travel is %.2lf\n", total);
 
 	return 0;
 }
 
 // Calculate distance between two points (x1, y1), (x2, y2)
-double distance(double x1, double y1, double x2, double y2) {
+double distance(double x1, double y1, double x2, double y2)
+{
 	double travel = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
 	return travel;
 }
