@@ -4,8 +4,6 @@
 // Program reads in 3 integers, and calculates the hundredth-placed digit of that integer
 // Program displays that hundredth-placed digit corresponding to the integer entered
 // Program prints out integer if it is less than 100
-//
-// SHEIKH UMAR
 
 #include <stdio.h>
 
@@ -61,7 +59,7 @@ int get_hundredth(int num)
 		return j;
 	}
 	
-	// 10001<=num<100000
+	// 10001 <= num < 100000
 	else if (num > 1000 && num <= 10000)
 	{
 		int i;
@@ -71,7 +69,7 @@ int get_hundredth(int num)
 		
 		return j;
 	}
-	// 100001<num<=1000000
+	// 100001 <num <= 1000000
 	else
 	{
 		int i;
