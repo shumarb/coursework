@@ -3,8 +3,6 @@
 //
 // Program reads in a number,
 // and prints out its digits.
-//
-// SHEIKH UMAR
 
 #include <stdio.h>
 
@@ -73,3 +71,4 @@ int main(void)
 	displays_number_of_digits(num_digits);
 	return 0;
 }
+
