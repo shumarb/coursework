@@ -25,8 +25,6 @@ int main(void)
 	}
 	else
 	{
-		answer = is_prime(num);
-		
 		if(is_prime(num) == 0)
 		{
 			printf("%d is a prime\n", num);
