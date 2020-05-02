@@ -46,6 +46,7 @@ int main(void)
 
 	return 0;
 }
+
 // Return 1 if num is not a prime, 0 otherwise
 int is_prime(int num)
 {
