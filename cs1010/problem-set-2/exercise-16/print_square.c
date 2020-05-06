@@ -6,7 +6,8 @@
 
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
 	int i, j, k
 
 	printf("Enter k: ");
