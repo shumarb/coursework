@@ -13,7 +13,7 @@ int main(void)
 	int factor, must_have, total_participants;
 
 	printf("Enter factor-digit: ");
-	scanf("%d" ,&factor);
+	scanf("%d", &factor);
 	printf("Enter must-have-digit: ");
 	scanf("%d", &must_have);
 	printf("Enter the number of participants: ");
