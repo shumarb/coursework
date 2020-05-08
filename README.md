@@ -1,5 +1,5 @@
 # Programming Coursework
-This repository contains my solutions to problem sets for the following modules related to Data Structures and Algorithms taught at the National University of Singapore:
+This repository contains my solutions to problem sets for the following modules taught at the National University of Singapore:
 
 Module Name | Module Code | Programming Language
 ---------- | ---------- | ----------
