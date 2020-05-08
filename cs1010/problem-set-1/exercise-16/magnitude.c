@@ -6,8 +6,8 @@
 
 #include <stdio.h>
 
-int main(void) {
-
+int main(void)
+{
 	double magnitude;
 
 	printf("Magnitude: ");
@@ -25,7 +25,8 @@ int main(void) {
 	else if (magnitude >= 6.0 && magnitude < 6.9)
 	{
 		printf("Classification: Strong\n");
-	} else 
+	} 
+	else 
 	{
 		printf("Classification: Major\n");
 	}
