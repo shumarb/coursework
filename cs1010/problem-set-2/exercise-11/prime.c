@@ -53,6 +53,7 @@ int is_prime(int num)
 			counter++;
 		}
 	}
+	
 	return counter;
 }
 

@@ -12,7 +12,7 @@ int main(void)
 	int sqrt_num;
 
 	printf("Enter an integer: ");
-	scanf("%d" ,&num);
+	scanf("%d", &num);
 
 	sqrt_num = sqrt(num);
 	

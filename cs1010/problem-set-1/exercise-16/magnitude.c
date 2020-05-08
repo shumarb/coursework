@@ -2,7 +2,8 @@
 // Problem Set 1 Exercise #16: magnitude.c
 //
 // Program reads in the value of a magnitude of an earthquake 
-// and displays the classification of this magnitude on the Ritcher Magnitude Scale
+// and displays the classification of this magnitude
+// on the Ritcher Magnitude Scale
 
 #include <stdio.h>
 
