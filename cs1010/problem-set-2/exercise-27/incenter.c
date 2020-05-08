@@ -12,11 +12,10 @@ double length(double x1, double y1, double x2, double y2);
 
 int main(void)
 {
-
 	double 	x1, y1,    // coordinates of 1st vertex
-		x2, y2,    // coordinates of 2nd vertex
-		x3, y3,    // coordinates of 3rd vertex
-		xI, yI;    // coordinates of incenter
+			x2, y2,    // coordinates of 2nd vertex
+			x3, y3,    // coordinates of 3rd vertex
+			xI, yI;    // coordinates of incenter
 
 	printf("Coordinates of 1st vertex: ");
 	scanf("%lf %lf", &x1, &y1);
@@ -43,8 +42,8 @@ void incenter(double xA, double yA, double xB, double yB, double xC, double yC, 
 	c = length(xA, yA, xB, yB);
 	p = a + b + c;
 
-	*xI_p = ((a * xA) + (b * xB) + (c * xC)) / p;
-	*yI_p = ((a * yA) + (b * yB) + (c * yC)) / p;
+	*xI_p = (((a * xA) + (b * xB) + (c * xC)) / p);
+	*yI_p = (((a * yA) + (b * yB) + (c * yC)) / p);
 }
 
 // Return length of a side of triangle given its
@@ -52,9 +51,9 @@ void incenter(double xA, double yA, double xB, double yB, double xC, double yC, 
 double length(double x1, double y1, double x2, double y2)
 {
 
-	double length,x_length,y_length;
-	x_length = x1 - x2;
-	y_length = y1 - y2;
+	double length, x_length, y_length;
+	x_length = (x1 - x2);
+	y_length = (y1 - y2);
 	length = sqrt(pow(x_length, 2.0) + pow(y_length, 2.0));
 	return length;  // stub
 }
