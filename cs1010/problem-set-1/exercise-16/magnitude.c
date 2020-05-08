@@ -16,7 +16,6 @@ int main(void)
 	if(magnitude < 4.0)
 	{
 		printf("Classification: Minor\n");
-
 	} 
 	else if (magnitude >= 4.0 && magnitude < 6.0)
 	{
