@@ -4,7 +4,7 @@
 // This program calculates the
 // standard deviations for n real numbers.
 //
-// <Replace this with your name>
+// SHEIKH UMAR A0149874L
 
 #include <stdio.h>
 #include <math.h>

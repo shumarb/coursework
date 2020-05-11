@@ -3,7 +3,7 @@
 //
 // This program checks whether all the values
 // in an array are sorted in non-decreasing order.
-//
+// SHEIKH UMAR A0149874L
 
 #include <stdio.h>
 #define MAX 10

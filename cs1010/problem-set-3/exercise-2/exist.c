@@ -4,6 +4,7 @@
 // This program reads an array of integers
 // and another integer k, checks if k exists
 // in the array.
+// SHEIKH UMAR A0149874L
 
 #include <stdio.h>
 #define MAX_SIZE 10
