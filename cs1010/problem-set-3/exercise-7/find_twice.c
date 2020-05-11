@@ -4,6 +4,7 @@
 // This program checks if any integer
 // is repeated in an array and if so,
 // reports the first duplicated integer.
+// SHEIKH UMAR A0149874L
 
 #include <stdio.h>
 #include <math.h>

@@ -4,6 +4,7 @@
 // This program tests if all the positive
 // number (if any) appear before all the
 // non-positive numbers (if any) in an array.
+// SHEIKH UMAR A0149874L
 
 #include <stdio.h>
 #include <math.h>

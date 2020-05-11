@@ -3,7 +3,7 @@
 //
 // This program accepts an array of integers
 // and reverse all data in the array
-
+// SHEIKH UMAR A0149874L
 
 #include <stdio.h>
 #define MAX_LEN 20

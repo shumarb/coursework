@@ -3,7 +3,7 @@
 //
 // This program reads a list of numbers
 // and print them out reversely.
-//
+// SHEIKH UMAR A0149874L
 
 #include <stdio.h>
 #define MAX_SIZE 10
