@@ -3,14 +3,15 @@ import java.util.Scanner;
 public class StringComparison {
 	
 	private boolean isTest = false;
-
+	private Scanner sc = new Scanner(System.in);
+	
 	private String readsString() {
-		Scanner sc = new Scanner(System.in);
 		String input = sc.nextLine();
 		return input.toLowerCase();
 	}
 	
 	private int comparesStrings(String input1, String input2) {
+		sc.close();
 		if (isTest) {
 			System.out.println("input1: " + input1 + ", input2: " + input2);
 		}
