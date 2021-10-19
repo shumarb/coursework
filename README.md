@@ -6,5 +6,5 @@ Module Code | Module Name | Programming Language
 CS1010 | Programming Methodology | C
 CS1020 | Data Structures & Algorithms 1 | Java
 CS2010 | Data Structures & Algorithms 2 | Java
-CS2106 | Operating Systems | C
+CS2106 | Introduction to Operating Systems | C
 CS3230 | Design & Analysis of Algorithms | Java
