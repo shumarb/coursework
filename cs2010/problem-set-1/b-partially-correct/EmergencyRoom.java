@@ -10,8 +10,8 @@ import java.io.*;
 class EmergencyRoom{
     private boolean test = false;
     private ArrayList <Patient> patientsAL = new ArrayList <Patient>();
-    private ArrayList <String> patientsOrderOfArrival = new ArrayList <String> ();
     private HashMap <String, Integer> patientsHMap = new HashMap <String, Integer> ();
+    private HashMap <String, Integer> patientsOrderOfArrival = new HashMap <String, Integer> ();
 
     private class Patient{
         private String _name;
@@ -85,10 +85,14 @@ class EmergencyRoom{
                     stop = true;
                     patientsAL.add(i, incoming);
                 }
-
+                
+                // If same level, obtain primitive int values of Integer
+                // object of incomingIndex and currIndex from
+                // patientsOrderOfArrival hashmap and compare.
+                // Do swap if incomingIndex int value < currIndex value
                 if( incoming._level == curr._level ){
-                    int incomingIndex = patientsOrderOfArrival.indexOf(incoming._name);
-                    int currIndex = patientsOrderOfArrival.indexOf(curr._name);
+                    int incomingIndex = (patientsOrderOfArrival.get(incoming._name)).intValue();
+                    int currIndex = (patientsOrderOfArrival.get(curr._name)).intValue();
                     if( test ){
                         System.out.println("incomingIndex = " + incomingIndex + ", currIndex = " + currIndex);
                     }
@@ -110,9 +114,9 @@ class EmergencyRoom{
             System.out.println("To add: " + patientName + ", " + emergencyLvl);
         }
         Patient incoming = new Patient(patientName, emergencyLvl);
-        storesPatient(incoming);
         patientsHMap.put(patientName, emergencyLvl);
-        patientsOrderOfArrival.add(patientName);
+        patientsOrderOfArrival.put(patientName, new Integer(patientsOrderOfArrival.size()));
+        storesPatient(incoming);
         if( test ){
             System.out.println("After arrival@hospital: ");
             print();
