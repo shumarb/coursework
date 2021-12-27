@@ -2,8 +2,13 @@
 import java.util.*;
 import java.io.*;
 
+// write your matric number here: A0149874L
+// write your name here: SHEIKH UMAR
+// write list of collaborators here:
+// year 2018 hash code: edyFpB4rcbU64QHhV8S9 (do NOT delete this line)
+
 class PatientNames {
-    private boolean test = true;
+    private boolean test = false;
     private TreeSet <String> patientsMale = new TreeSet <String> ();
     private TreeSet <String> patientsFemale = new TreeSet <String> ();
     private TreeMap <String, Integer> patientsInfo = new TreeMap <String, Integer> ();    
@@ -17,7 +22,6 @@ class PatientNames {
         System.out.println("patientsInfo: " + patientsInfo);
         System.out.println("patientsMale: " + patientsMale);
         System.out.println("patientsFemale: " + patientsFemale);
-        System.out.println(patientsFemale.descendingSet());
         System.out.println();
     }
 
