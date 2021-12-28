@@ -3,6 +3,13 @@
 import java.util.*;
 import java.io.*;
 
+// write your matric number here: A0149874L
+// write your name here: Sheikh Umar
+// write list of collaborators here (The following students answered my
+// queries regarding PS3 on the NUS CS2010 FB Group: Daniel Kwang Weide, Iz Ho, Ryan Tal Teo, Enzio Kam Hai Hong
+// Website that I referred to: https://www.geeksforgeeks.org/articulation-points-or-cut-vertices-in-a-graph/
+// year 2015 hash code: JESg5svjYpIsmHmIjabX (do NOT delete this line)// <- generate a new hash code
+
 class HospitalRenovation {
     private Scanner sc = new Scanner(System.in);
     private boolean test = false;

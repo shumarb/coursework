@@ -13,8 +13,7 @@ class Addition {
 
         while (A.signum() != -1 && B.signum() != -1)
         {
-            BigInteger sum = A.add(B);
-            System.out.println(sum);
+            System.out.println(A.add(B));
             A = sc.nextBigInteger();
             B = sc.nextBigInteger();
         }
