@@ -6,7 +6,7 @@
 // Next, program adds these digits to form a number.
 // Finally, program obtains the last digit of this number
 // and prints it out.
-
+//
 // SHEIKH UMAR
 
 #include <stdio.h>

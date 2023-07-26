@@ -7,6 +7,8 @@
 // Program calculates distance from NTUC to Home
 // Program adds the 3 distances above to form total distance
 // Program prints out total distance travelled
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>

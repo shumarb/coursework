@@ -4,6 +4,8 @@
 // Program reads in three values.
 // Then, program computes the arithmetic and geometric means.
 // Finally, program prints out the values of the aforementioned means.
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>
