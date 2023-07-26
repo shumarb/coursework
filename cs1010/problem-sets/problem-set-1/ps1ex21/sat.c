@@ -8,6 +8,8 @@
 // Program prints out the IQ score.
 // If each major score is more than 600, OR IQ score is at least 120
 // Program prints out "Wow, this is amazing!"
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 

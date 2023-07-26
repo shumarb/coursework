@@ -4,6 +4,8 @@
 // Program reads in lengths and widths of slab and tray, then
 // calculates the minimum unused area for vertical and horizontal arrangements
 // of slabs in tray, and prints out the smaller value
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 
