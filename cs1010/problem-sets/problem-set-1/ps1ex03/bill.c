@@ -5,6 +5,8 @@
 // and converts it to type double for calculation.
 // Program displays service and GST charges
 // Program then displays total bill
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 

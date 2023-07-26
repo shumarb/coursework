@@ -2,7 +2,9 @@
 // Problem Set 1 Exercise #07: sphere.c
 // 
 // This program reads diameter and 
-// calculates surface area of a sphere.
+// calculates surface area of a sphere
+//
+// SHEIKH UMAR
 
 #include <math.h>
 #include <stdio.h>

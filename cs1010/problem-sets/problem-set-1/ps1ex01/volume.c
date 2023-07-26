@@ -2,7 +2,7 @@
 // Problem Set 1 Exercise #01: volume.c
 // 
 // This program reads in length, width and
-// height of a box, computes its volume.
+// height of a box, computes its volume
 //
 // SHEIKH UMAR
 

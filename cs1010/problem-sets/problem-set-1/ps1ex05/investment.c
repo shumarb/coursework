@@ -4,6 +4,8 @@
 // Program takes in positive integers principal, rate and num_years
 // and computes the amount of money earned after num_years years
 // in 2 decimal places
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>

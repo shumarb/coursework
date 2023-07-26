@@ -4,6 +4,8 @@
 // Program reads in 3 integers, and calculates the hundredth-placed digit of that integer
 // Program displays that hundredth-placed digit corresponding to the integer entered
 // Program prints out integer if it is less than 100
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 

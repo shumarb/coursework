@@ -2,6 +2,8 @@
 // Problem Set 1 Exercise #08: speed.c
 //
 // Program calculates the speed of sound based on a given temperature
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>

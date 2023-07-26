@@ -2,9 +2,9 @@
 // Problem Set 1 Exercise #02: heights.c
 //
 // This program calculates the heights of 
-// children according to heights of parents.
+// children according to heights of parents
 //
-// <SHEIKH UMAR>
+// SHEIKH UMAR
 
 #include <stdio.h>
 
