@@ -22,7 +22,7 @@ int main(void) {
 	printf("Height for Tom: %.2f\n", tom);
 
 	//Calculation for Kate's height
-	kate = (0.5 * (mary + (john * 0.923));
+	kate = 0.5 * (mary + (john * 0.923));
 	printf("Height for Kate: %.2f\n", kate);
 
 	return 0;
