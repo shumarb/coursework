@@ -1,5 +1,5 @@
 # Programming Coursework
-This repository contains my solutions to problem sets for the following modules taught at the National University of Singapore:
+This repository contains my solutions to problem sets and assignments for these modules taught at the National University of Singapore:
 
 Module Code | Module Information | Programming Language
 ---------- | ---------- | ----------
