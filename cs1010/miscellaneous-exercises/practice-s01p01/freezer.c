@@ -3,6 +3,7 @@
  *  Unit 4 Exercise 5: Estimate temperature in a freezer
  *  given the elapsed time since power failure.
  *  Formula: T = (4*t^2 / (t+2)) - 20
+ *  SHEIKH UMAR
  */
 #include <stdio.h>
 
