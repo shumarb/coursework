@@ -5,7 +5,6 @@
 // all digits is odd.
 //
 // SHEIKH UMAR
-
 #include <stdio.h>
 
 int is_sum_odd(int num);

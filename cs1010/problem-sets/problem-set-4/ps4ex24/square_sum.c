@@ -5,7 +5,6 @@
 // returns the sum of all its digits in square.
 //
 // SHEIKH UMAR
-
 #include <stdio.h>
 
 int square_sum(int num);

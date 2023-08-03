@@ -5,7 +5,6 @@
 // of digits of a positive integer n.
 //
 // SHEIKH UMAR
-
 #include <stdio.h>
 #include <math.h>
 
