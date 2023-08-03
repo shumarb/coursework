@@ -4,7 +4,7 @@
 // This program checks if digit k appears
 // in integer number.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 

@@ -3,7 +3,7 @@
 //
 // This program prints conway sequence a(n).
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 

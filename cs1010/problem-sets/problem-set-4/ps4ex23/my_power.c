@@ -4,7 +4,7 @@
 // This program computes the nth power of x,
 // where n is a non-negative integer.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 

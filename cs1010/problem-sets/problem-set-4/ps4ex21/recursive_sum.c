@@ -4,7 +4,7 @@
 // This program prints f(x) whose value
 // is given by the recursive formula.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 #include <stdio.h>
 
 int f(int x);

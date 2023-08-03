@@ -4,7 +4,7 @@
 // This program checks whether the sum of
 // all digits is odd.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 

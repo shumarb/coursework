@@ -4,7 +4,7 @@
 // This program reads a positive integer,
 // returns the sum of all its digits in square.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 

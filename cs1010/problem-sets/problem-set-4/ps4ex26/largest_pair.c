@@ -4,7 +4,7 @@
 // This program  determines the largest pair
 // of digits of a positive integer n.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>
