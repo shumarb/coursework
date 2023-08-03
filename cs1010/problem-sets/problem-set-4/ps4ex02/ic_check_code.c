@@ -4,7 +4,7 @@
 // This program reads an NRIC number
 // and produces its check code.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 

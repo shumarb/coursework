@@ -4,7 +4,7 @@
 // This program reads age and gender of a person,
 // print out corresponding information.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <ctype.h>

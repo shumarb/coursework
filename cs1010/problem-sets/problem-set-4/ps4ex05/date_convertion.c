@@ -4,7 +4,7 @@
 // This program reads a string in the UK date format
 // and outputs the equivalent American format.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <string.h>

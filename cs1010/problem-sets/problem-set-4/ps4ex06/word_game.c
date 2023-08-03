@@ -4,7 +4,7 @@
 // This program reads in a word and computes 
 // the total points of all the letters in the word.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <ctype.h> // Functions that have character input MUST have <ctype.h> at header.
@@ -17,7 +17,7 @@ int main(void)
 {
 	char word[MAX];
 	printf("Enter a word: ");
-	scanf("%s", word);  // read a sigle word
+	scanf("%s", word);  // read a single word
 	printf("Total score = %d\n", compute_score(word));
 	return 0;
 }

@@ -4,7 +4,7 @@
 // This program prints duplicated copies of an
 // input string, up to a total of 10 characters.
 //
-// SHEIKH UMAR A01409874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <string.h>

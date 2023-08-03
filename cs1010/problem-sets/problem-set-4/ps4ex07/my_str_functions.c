@@ -4,7 +4,7 @@
 // This program writes our own string functions:
 // my_strlen(), my_strcpy(), my_strcat() and my_strcmp().
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>

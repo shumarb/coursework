@@ -4,7 +4,7 @@
 // This program reads a list of input strings,
 // reports how many of them are palindrome.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <ctype.h>

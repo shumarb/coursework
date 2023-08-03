@@ -5,7 +5,7 @@
 // that can perform addition, subtraction,
 // multiplication and division on integers.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 

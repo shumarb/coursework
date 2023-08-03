@@ -6,7 +6,7 @@
 // whether the remains two strings both have
 // odd or even characters.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <ctype.h>
