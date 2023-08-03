@@ -4,7 +4,7 @@
 // This program performs arithmetic calculation
 // on complex numbers.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <ctype.h>

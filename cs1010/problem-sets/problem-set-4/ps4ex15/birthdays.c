@@ -5,7 +5,7 @@
 // and checks if there exists two birthdays
 // of the same day and month.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #define MAX 25

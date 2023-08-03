@@ -5,7 +5,7 @@
 // and calculates the area of the minimum
 // surrounding circle.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>

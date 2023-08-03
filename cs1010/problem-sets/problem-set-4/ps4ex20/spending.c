@@ -4,7 +4,7 @@
 // This program prints the spending of
 // a particular customer in descending order.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <string.h>

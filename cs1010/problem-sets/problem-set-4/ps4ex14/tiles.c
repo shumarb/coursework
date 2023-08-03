@@ -5,7 +5,7 @@
 // in cost between the cheapest tile
 // and the most expensive tile.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>

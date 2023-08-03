@@ -6,7 +6,7 @@
 // perimeter after folding the rectangle
 // once along the x-axis or y-axis.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>

@@ -5,7 +5,7 @@
 // and prints out the student roster in
 // ascending order of student number.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <string.h>

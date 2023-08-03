@@ -4,7 +4,7 @@
 // This program reads in the particulars of two persons,
 // prints out the name of the younger one.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <string.h>

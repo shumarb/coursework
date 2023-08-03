@@ -6,7 +6,7 @@
 // the total length of horizontal and vertical lines
 // if we trace the points in the sorted list.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 #define MAX_POINTS 20

@@ -4,7 +4,7 @@
 // This program reads in two fractions, 
 // checks if they equal and computes their sum.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
 #include <stdio.h>
 
