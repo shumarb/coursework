@@ -1,11 +1,6 @@
 // CS1010 AY2012/3 Semester 1
 // PE1 Ex2: ucard.c
 // Name: Sheikh Umar
-// Matriculation number: 
-// plab account-id: 
-// Discussion group: 
-// Description:
-
 #include <stdio.h>
 
 int luhnah(int);
