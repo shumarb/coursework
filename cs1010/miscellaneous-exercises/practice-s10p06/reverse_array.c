@@ -1,17 +1,20 @@
 // reverse_array.c
 // Reverse all values in an integer array.
+//
+// SHEIKH UMAR
+
 #include <stdio.h>
 #define MAX_SIZE 15
 
 int readArray(int []);
 void printArray(int [], int);
-void reverseArray(int [], int, int);
+void reverseArray(int [], int, int, int);
 
 int main(void) {
 	int list[MAX_SIZE], size;
 
 	size = readArray(list);
-	reverseArray(list, 0, size - 1);
+	reverseArray(list, size, 0, size - 1);
 	
 	printArray(list, size);
 	
@@ -44,7 +47,7 @@ void printArray(int arr[], int size) {
 
 // Reverse all the values in the array arr
 // Pre-cond: size >= 1
-void reverseArray(int arr[], int first_index, int last_index) {
+void reverseArray(int arr[], int size, int first_index, int last_index) {
 	if (first_index > last_index)
 	{
 		return;
@@ -55,6 +58,6 @@ void reverseArray(int arr[], int first_index, int last_index) {
 	arr[first_index] = arr[last_index];
 	arr[last_index] = temp;
 
-	reverseArray(arr, first_index + 1, last_index - 1);
+	reverseArray(arr, size, first_index + 1, last_index - 1);
 }
 
