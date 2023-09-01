@@ -9,4 +9,4 @@ Module Code | Module Information | Programming Language
 [CS2103](https://github.com/Sheikh-Umar/cs2103)                                    | [Software Engineering](https://nusmods.com/modules/CS2103/software-engineering) | Java
 [CS2106](https://github.com/Sheikh-Umar/programming-coursework/tree/master/cs2106) | [Introduction to Operating Systems](https://nusmods.com/modules/CS2106/introduction-to-operating-systems) | C
 [CS3230](https://github.com/Sheikh-Umar/programming-coursework/tree/master/cs3230) | [Design & Analysis of Algorithms](https://nusmods.com/modules/CS3230/design-and-analysis-of-algorithms) | Java
-[4221](https://github.com/Sheikh-Umar/programming-coursework/tree/master/cs4221) | [Database Applications Design & Tuning](https://nusmods.com/modules/https://nusmods.com/courses/CS4221/database-applications-design-and-tuning) | SQL
+[CS4221](https://github.com/Sheikh-Umar/programming-coursework/tree/master/cs4221) | [Database Applications Design & Tuning](https://nusmods.com/courses/CS4221/database-applications-design-and-tuning) | SQL, XML
