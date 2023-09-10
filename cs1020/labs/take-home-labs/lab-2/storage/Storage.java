@@ -5,8 +5,8 @@
 import java.util.*;
 
 public class Storage {
-    private boolean isTest = false;
     private ArrayList <Box> boxList = new ArrayList <> ();
+    private boolean isTest = false;
     private HashMap <String, Item> handHeldMap = new HashMap <> ();
     private HashMap <String, Item> itemsMap = new HashMap <>(); 
     private int[] values = new int[4];
