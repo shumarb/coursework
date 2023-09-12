@@ -95,7 +95,7 @@ public class ICPC {
 
     // Reads in teams
     // Precon: N >= 1
-    // Postcon: Execute initiation
+    // Postcon: Executes initiation
     private void formsTeams() {
         if (isTest) {
             System.out.println("*** formsTeams");
@@ -266,7 +266,7 @@ public class ICPC {
 
     // Executes UNSOLVED query
     // Precon: Query entered is UNSOLVED
-    // Postcon: Nil
+    // Postcon: Processes next query
     private void unsolvedQuery() {
         if (isTest) {
             System.out.println("*** unsolved");
@@ -300,7 +300,7 @@ public class ICPC {
 
     // Executes query for TOP
     // Precon: Query entered is TOP
-    // Postcon: Nil
+    // Postcon: Processes next query
     private void topQuery() {
         if (isTest) {
             System.out.println("*** top");
@@ -362,14 +362,10 @@ class Problem {
 
     public Problem(int problemId) {
         this.problemId = problemId;
-        this.teamsSolvedList = new ArrayList <> ();
         this.timeSolvedFirstTime = -1;
+        this.teamsSolvedList = new ArrayList <> ();
     }
-
-    public List <Team> getsTeamsSolvedList() {
-        return teamsSolvedList;
-    }
-
+    
     public boolean isProblemIdSolved() {
         return this.teamsSolvedList.isEmpty();
     }
@@ -384,6 +380,10 @@ class Problem {
 
     public int getsTimeSolvedFirstTime() {
         return this.timeSolvedFirstTime;
+    }
+
+    public List <Team> getsTeamsSolvedList() {
+        return this.teamsSolvedList;
     }
 
     public String getsTeamNameSolvedFirst() {
@@ -417,13 +417,29 @@ class Team implements Comparable <Team> {
 
     private void initialisesMaps(int numProblems) {
         for (int i = 1; i <= numProblems; i++) {
-            isProblemIdSolvedMap.put(i, false);
-            problemIdNumAttemptsMap.put(i, 0);
+            this.isProblemIdSolvedMap.put(i, false);
+            this.problemIdNumAttemptsMap.put(i, 0);
         }
     }
 
     public boolean checksIsProblemIdSolved(int problemId) {
-        return isProblemIdSolvedMap.get(problemId).booleanValue();
+        return this.isProblemIdSolvedMap.get(problemId).booleanValue();
+    }
+
+    public int compareTo(Team newTeam) {
+        return this.getsTeamName().compareTo(newTeam.getsTeamName());
+    }
+    
+    public int getsNumAcceptedSubmissions() {
+        return this.numAcceptedSubmissions;
+    }
+    
+    public int getsNumAttempts(int problemId) {
+        return this.problemIdNumAttemptsMap.get(problemId);
+    }
+
+    public int getsNumPenalty() {
+        return this.numPenalty;
     }
 
     public Map <Integer, Boolean> getsIsProblemIdSolvedMap() {
@@ -434,36 +450,19 @@ class Team implements Comparable <Team> {
         return this.problemIdNumAttemptsMap;
     }
     
-    public int compareTo(Team newTeam) {
-        return this.getsTeamName().compareTo(newTeam.getsTeamName());
-    }
-    
-    public int getsNumAcceptedSubmissions() {
-        return numAcceptedSubmissions;
-    }
-    
-    public int getsNumAttempts(int problemId) {
-        return problemIdNumAttemptsMap.get(problemId);
-    }
-
-    public int getsNumPenalty() {
-        return this.numPenalty;
+    public String getsTeamName() {
+        return this.teamName;
     }
 
     // For submissions that are rejected
     public void increasesNumAttempts(int problemId) {
-        int numAttempts = problemIdNumAttemptsMap.get(problemId);
-        problemIdNumAttemptsMap.put(problemId, (numAttempts + 1));
+        int numAttempts = this.problemIdNumAttemptsMap.get(problemId);
+        this.problemIdNumAttemptsMap.put(problemId, (numAttempts + 1));
     }
 
     public void updatesProblemIdSolved(int problemId, int numAttempts, int timeSolved) {
-        isProblemIdSolvedMap.remove(problemId);
-        isProblemIdSolvedMap.put(problemId, true);
+        this.isProblemIdSolvedMap.put(problemId, true);
         this.numAcceptedSubmissions++;
         this.numPenalty += (timeSolved + (numAttempts * 20));
-    }
-
-    public String getsTeamName() {
-        return this.teamName;
     }
 }
