@@ -264,11 +264,18 @@ public class Storage {
         }
     }
 
+    // Closes scanner
+    // Precon: All queries have been processed
+    // Postcon: Nil
+    private void closesScanner() {
+        sc.close();
+    }
+
     public void run() {
         readsValues();
         initialisesBoxList();
         processesQueries();
-        sc.close();
+        closesScanner();
     }
     
     public static void main(String[] args) {
@@ -278,28 +285,16 @@ public class Storage {
 }
 
 class Box {
+    private ArrayList <Item> boxItemsList;
     private int boxCapacity;
     private int boxCurrentCapacity;
     private int boxNumber;
-    private ArrayList <Item> boxItemsList;
 
     public Box(int boxNumber, int boxCapacity, ArrayList <Item> boxItemsList) {
         this.boxCapacity = boxCapacity;
-        this.boxNumber = boxNumber;
         this.boxCurrentCapacity = 0;
         this.boxItemsList = boxItemsList;
-    }
-    
-    public int getsBoxCapacity() {
-        return this.boxCapacity;
-    }
-
-    public int getsBoxCurrentCapacity() {
-        return this.boxCurrentCapacity;
-    }
-
-    public int getsBoxNumber() {
-        return this.boxNumber;
+        this.boxNumber = boxNumber;
     }
 
     public ArrayList <Item> getsBoxItemList() {
@@ -308,6 +303,18 @@ class Box {
 
     public boolean hasVacancy() {
         return this.boxCurrentCapacity < boxCapacity;
+    }
+
+    public int getsBoxCapacity() {
+        return this.boxCapacity;
+    }
+
+    public int getsBoxCurrentCapacity() {
+        return this.boxCurrentCapacity;
+    }
+    
+    public int getsBoxNumber() {
+        return this.boxNumber;
     }
 
     public void addsItem(Item itemToAdd) {
@@ -321,16 +328,15 @@ class Box {
     }
 }
 
-
 class Item {
     private int itemLocation; // 0 for handheld, >= 1 means item in box number >= 1
     private int itemValue;
     private String itemName;
 
     public Item(String itemName, int itemValue, int itemLocation) {
+        this.itemLocation = itemLocation;
         this.itemName = itemName;
         this.itemValue = itemValue;
-        this.itemLocation = itemLocation;
     }
 
     public int getsItemLocation() {
