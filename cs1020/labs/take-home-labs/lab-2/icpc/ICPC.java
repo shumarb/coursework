@@ -14,7 +14,7 @@ public class ICPC {
 
     // Reads N, P, and Q
     // Precon: N, P and Q are each 0
-    // Postcon: Execute initiation before processing queries
+    // Postcon: N, P and Q are each > 0
     private void readsValues() {
         if (isTest) {
             System.out.println("*** readsValues");
