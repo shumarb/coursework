@@ -75,6 +75,7 @@ public class ICPC {
         if (isTest) {
             System.out.println("*** forms Problems");
         }
+        
         for (int i = 0; i < values[1]; i++) {
             Problem newProblem = new Problem(i + 1);
             problemsList.add(i, newProblem);
