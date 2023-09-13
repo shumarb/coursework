@@ -139,8 +139,11 @@ public class ICPC {
         if (isTest) {
             for (int i = 0; i < problemsList.size(); i++) {
                 Problem currentProblem = problemsList.get(i);
-                System.out.print("Problem #" + currentProblem.getsProblemId() + ": index " + i + ", timeSolvedFirstTime: " + currentProblem.getsTimeSolvedFirstTime() +
-                                ", teamsSolved: " + currentProblem.getsTeamsSolvedList().size() + " | "
+                System.out.print("Problem #" + currentProblem.getsProblemId() + 
+                                    ": index " + i + 
+                                    ", timeSolvedFirstTime: " + currentProblem.getsTimeSolvedFirstTime() +
+                                    ", teamsSolved: " + currentProblem.getsTeamsSolvedList().size() + 
+                                    " | "
                 );
             }
             System.out.println();
@@ -426,6 +429,7 @@ class Team implements Comparable <Team> {
         return this.isProblemIdSolvedMap.get(problemId).booleanValue();
     }
 
+    // Arrange in lexicographically-increasing order of teamName
     public int compareTo(Team newTeam) {
         return this.getsTeamName().compareTo(newTeam.getsTeamName());
     }
