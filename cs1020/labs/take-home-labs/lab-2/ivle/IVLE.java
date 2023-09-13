@@ -28,20 +28,22 @@ public class IVLE {
     // Adds module to modules arraylist
     // Precon: No module have been created
     // Postcon: At least one module has been created
-    private void addsModule() {
-        String moduleName = sc.next();
-        int numModuleCredits = sc.nextInt();
-        int numMaxStudents = sc.nextInt();
+    private void addsModule(int N) {
+        for (int i = 0; i < N; i++) {
+            String moduleName = sc.next();
+            int numModuleCredits = sc.nextInt();
+            int numMaxStudents = sc.nextInt();
 
-        Module module = new Module(numModuleCredits, numMaxStudents, 0);
-        modules.put(moduleName, module);
+            Module module = new Module(numModuleCredits, numMaxStudents, 0);
+            modules.put(moduleName, module);
 
-        if (isTest) {
-            System.out.println("*** Added module: " + moduleName
-                                + " --> credit: " + module.getsNumModularCredits()
-                                + "; students enrolled: " + module.getsNumStudentsEnrolled()
-                                + "; max num students: " + module.getsNumMaxStudents()
-            );
+            if (isTest) {
+                System.out.println("*** Added module: " + moduleName
+                                    + " --> credit: " + module.getsNumModularCredits()
+                                    + "; students enrolled: " + module.getsNumStudentsEnrolled()
+                                    + "; max num students: " + module.getsNumMaxStudents()
+                );
+            }
         }
     }
 
@@ -105,7 +107,7 @@ public class IVLE {
         // Situation A: Student exists
         if (students.containsKey(studentName)) {
             Student studentToCheck = students.get(studentName);
-            ArrayList <String> studentToCheckModuleList = studentToCheck.getsmodulesRegistered();
+            ArrayList <String> studentToCheckModuleList = studentToCheck.getsModulesRegistered();
 
             // A1. Student exists, and is already enrolled in module
             if (studentToCheckModuleList.contains(moduleName)) {
@@ -154,7 +156,7 @@ public class IVLE {
         // Situation A: Student exists
         if (students.containsKey(studentName)) {
             Student studentToCheck = students.get(studentName);
-            ArrayList <String> studentToCheckModulesRegistered = studentToCheck.getsmodulesRegistered();
+            ArrayList <String> studentToCheckModulesRegistered = studentToCheck.getsModulesRegistered();
             // Situation A1: Student exists and is enrolled in module to be removed
             if (studentToCheckModulesRegistered.contains(moduleName)) {
                 Module moduleToUpdate = modules.get(moduleName);
@@ -198,7 +200,7 @@ public class IVLE {
             Student currentStudent = students.get(studentName);
             System.out.print(currentStudent.getsTotalNumCredits() + " ");
 
-            ArrayList <String> moduleNames = currentStudent.getsmodulesRegistered();
+            ArrayList <String> moduleNames = currentStudent.getsModulesRegistered();
             if (moduleNames.size() == 1) {
                 System.out.println(moduleNames.get(0));
             } else {
@@ -209,20 +211,28 @@ public class IVLE {
             }
         }
     }
-    
-    private void run() {
-        int N = sc.nextInt();
-        int Q = sc.nextInt();
 
-        for (int i = 0; i < N; i++) {
-            addsModule();
+    // Reads integer value
+    // Precon: Integer variable is assigned value of 0
+    // Postcon: Desired integer is assigned value of > 0
+    private int readsIntegerValue() {
+        int value = sc.nextInt();
+        if (isTest) {
+            System.out.println("* entered: " + value);
         }
 
+        return value;
+    }
+
+    // Processes Q queries
+    // Precon: Q > 0
+    // Postcon: Closes scanner
+    private void processesQuery(int Q) {
         for (int i = 0; i < Q; i++) {
             String queryType = sc.next();
-            
-            if (queryType.equals("total")) {
-                totalQuery();
+
+            if (queryType.equals("details")) {
+                detailsQuery();
             }
 
             if (queryType.equals("highest")) {
@@ -237,12 +247,25 @@ public class IVLE {
                 removesQuery();
             }
 
-            if (queryType.equals("details")) {
-                detailsQuery();
+            if (queryType.equals("total")) {
+                totalQuery();
             }
         }
+    }
 
+    // Closes scanner
+    // Precon: All queries have been processed
+    // Postcon: End of program
+    private void closesScanner() {
         sc.close();
+    }
+    
+    private void run() {
+        int N = readsIntegerValue();
+        int Q = readsIntegerValue();
+        addsModule(N);
+        processesQuery(Q);
+        closesScanner();
     }
     
     public static void main(String[] args) {
@@ -252,22 +275,26 @@ public class IVLE {
 }
 
 class Module {
-    private int numModularCredits;
     private int numMaxStudents;
+    private int numModularCredits;
     private int numStudentsEnrolled;
 
     public Module(int modularCredits, int numMaxStudents, int numStudentsEnrolled) {
-        this.numModularCredits = modularCredits;
         this.numMaxStudents = numMaxStudents;
+        this.numModularCredits = modularCredits;
         this.numStudentsEnrolled = numStudentsEnrolled;
     }
 
-    public int getsNumModularCredits() {
-        return this.numModularCredits;
+    public boolean checksHasMaxNumStudentsReached() {
+        return this.numStudentsEnrolled == this.numMaxStudents;
     }
 
     public int getsNumMaxStudents() {
         return this.numMaxStudents;
+    }
+
+    public int getsNumModularCredits() {
+        return this.numModularCredits;
     }
 
     public int getsNumStudentsEnrolled() {
@@ -280,10 +307,6 @@ class Module {
 
     public void decreasesNumStudentsRegistered() {
         this.numStudentsEnrolled--;
-    }
-
-    public boolean checksHasMaxNumStudentsReached() {
-        return this.numStudentsEnrolled == this.numMaxStudents;
     }
 }
 
@@ -298,20 +321,20 @@ class Student {
         this.totalNumCredits += numModuleCredits;
     }
 
-    public String getsStudentName() {
-        return this.studentName;
+    public ArrayList <String> getsModulesRegistered() {
+        return this.modulesRegistered;
+    }
+
+    public boolean checksRegisteredModule (String moduleName) {
+        return modulesRegistered.contains(moduleName);
     }
 
     public int getsTotalNumCredits() {
         return this.totalNumCredits;
     }
 
-    public ArrayList <String> getsmodulesRegistered() {
-        return this.modulesRegistered;
-    }
-
-    public boolean checksRegisteredModule (String moduleName) {
-        return modulesRegistered.contains(moduleName);
+    public String getsStudentName() {
+        return this.studentName;
     }
     
     public void addsModule(String moduleName, int numModuleCredits) {
