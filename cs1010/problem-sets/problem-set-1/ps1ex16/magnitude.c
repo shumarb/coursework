@@ -15,7 +15,7 @@ int main(void)
 	printf("Magnitude: ");
 	scanf("%lf", &magnitude);
 
-	if(magnitude < 4.0)
+	if (magnitude < 4.0)
 	{
 		printf("Classification: Minor\n");
 	} 
