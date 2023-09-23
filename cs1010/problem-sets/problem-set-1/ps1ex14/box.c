@@ -7,8 +7,8 @@
 // 
 // SHEIKH UMAR
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 // function prototypes
 int compute_surface_area(int, int , int);
