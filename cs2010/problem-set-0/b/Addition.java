@@ -1,7 +1,8 @@
 // Addition.java
-// Read in 2 numbers, and print out its sum.
+// Read in 2 numbers using for big inters, and print out its sum.
 // Keep asking user for the number as long as both are at least 0.
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Addition {
@@ -9,16 +10,17 @@ public class Addition {
 
     private void run() {
         Scanner sc = new Scanner(System.in);
-        int firstNumber = sc.nextInt();
-        int secondNumber = sc.nextInt();
+        BigInteger firstNumber = sc.nextBigInteger();
+        BigInteger secondNumber = sc.nextBigInteger();
+
         if (isTest) {
             System.out.println("firstNumber = " + firstNumber + ", secondNumber = " + secondNumber);
         }
 
-        while (firstNumber >= 0 || secondNumber >= 0) {
-            System.out.println((firstNumber + secondNumber));
-            firstNumber = sc.nextInt();
-            secondNumber = sc.nextInt();
+        while (firstNumber.intValue() >= 0 || secondNumber.intValue() >= 0) {
+            System.out.println(firstNumber.add(secondNumber));
+            firstNumber = sc.nextBigInteger();
+            secondNumber = sc.nextBigInteger();
         }
 
         sc.close();
