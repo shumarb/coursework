@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-int a(int n);
+int a(int);
 
 int main(void)
 {
@@ -27,13 +27,10 @@ int main(void)
 // the recursive formula
 int a(int n)
 {
-	if(n >= 1 && n <= 2)
+	if (n >= 1 && n <= 2)
 	{
 		return 1;
 	}
-	else
-	{
-		return a(a(n - 1)) + a(n - a(n - 1));
-	}
+	
+	return a(a(n - 1)) + a(n - a(n - 1));
 }
-

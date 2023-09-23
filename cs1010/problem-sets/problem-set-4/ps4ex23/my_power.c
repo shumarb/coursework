@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-double my_pow(double x, int n);
+double my_pow(double, int);
 
 int main(void)
 {
@@ -26,14 +26,11 @@ int main(void)
 // Recursively compute x to the power of n
 double my_pow(double x, int n)
 {
-	// Base cases: n=0,n=1;
-	if(n == 0)
+	// Base cases: n = 0, n = 1;
+	if (n == 0)
 	{
 		return 1;
 	}
-	else
-	{
-		return (x * (my_pow(x, n - 1)));
-	}
-}
 
+	return (x * (my_pow(x, n - 1)));
+}

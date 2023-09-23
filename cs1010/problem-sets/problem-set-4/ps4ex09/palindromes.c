@@ -6,15 +6,15 @@
 //
 // SHEIKH UMAR
 
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 #include <string.h>
 
 #define MAX_LEN 90
 
-int count_palindrome(char str[]);
-void read_string(char str[]);
-int is_palindrome(char str[]);
+int count_palindrome(char []);
+int is_palindrome(char []);
+void read_string(char []);
 
 int main(void)
 {
@@ -32,16 +32,16 @@ int main(void)
 // in the input strings
 int count_palindrome(char str[])
 {
-	int k, num, count = 0;
 	char space;
+	int k, num, count = 0;
 
 	printf("How many strings? ");
 	scanf("%d%c", &num, &space);
 	printf("Enter %d strings, each on a line:\n", num);
-	for(k = 0; k < num; k++)
+	for (k = 0; k < num; k++)
 	{
 		read_string(str);
-		if(is_palindrome(str))
+		if (is_palindrome(str))
 		{
 			count++;
 		}
@@ -55,7 +55,7 @@ int count_palindrome(char str[])
 void read_string(char str[])
 {
 	fgets(str, MAX_LEN, stdin);
-	if(str[strlen(str)] == '\n')
+	if (str[strlen(str)] == '\n')
 	{
 		str[strlen(str)] = '\0';
 	}
@@ -63,23 +63,22 @@ void read_string(char str[])
 	int j, k = 0;
 	char new[MAX_LEN];
 
-	for(j = 0; j < strlen(str); j++)
+	for (j = 0; j < strlen(str); j++)
 	{
-		if(isalpha(str[j]))
+		if (isalpha(str[j]))
 		{
 			new[k++] = tolower(str[j]);// Input lowercase of alphabet in str to new
 		}
 	}
 	new[k] = '\0';
 
-	// Since j<(k+1), assign characters from 0 to k in new
+	// Since j < (k+1), assign characters from 0 to k in new
 	// to str, so NULLSPACE will be assigned to str
-	for(j = 0; j < (k + 1); j++)
+	for (j = 0; j < (k + 1); j++)
 	{
 		str[j] = new[j];
 	}
 }
-
 
 // Check if str is a palindrome or not
 // Return 1 if so, 0 otherwise
@@ -89,14 +88,11 @@ int is_palindrome(char str[])
 
 	while(lower < upper)
 	{
-		if(str[lower] != str[upper])
+		if (str[lower++] != str[upper--])
 		{
 			return 0;
 		}
-		lower++;
-		upper--;
 	}
 
 	return 1;
 }
-

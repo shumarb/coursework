@@ -21,7 +21,7 @@ int main(void)
 	input_len = strlen(input);
 	rounds = 10 / input_len;
 
-	for(i = 0 ; i < rounds; i++)
+	for (i = 0 ; i < rounds; i++)
 	{
 		printf("%s",input);
 	}
@@ -29,4 +29,3 @@ int main(void)
 
 	return 0;
 }
-

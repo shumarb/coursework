@@ -8,8 +8,8 @@
 //
 // SHEIKH UMAR
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 typedef struct {
 	double side1, side2;
@@ -17,9 +17,8 @@ typedef struct {
 
 int main(void)
 {
-	// declare a rectangle of type rectangle_t below
-	rectangle_t rect;
 	double fold1, fold2;
+	rectangle_t rect;
 
 	printf("Enter lengths of two sides: ");
 	scanf("%lf %lf", &rect.side1, &rect.side2);
@@ -30,4 +29,3 @@ int main(void)
 
 	return 0;
 }
-

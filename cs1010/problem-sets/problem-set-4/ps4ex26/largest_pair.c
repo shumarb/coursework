@@ -5,10 +5,11 @@
 // of digits of a positive integer n.
 //
 // SHEIKH UMAR
-#include <stdio.h>
-#include <math.h>
 
-int largest_digit_pair(int n);
+#include <math.h>
+#include <stdio.h>
+
+int largest_digit_pair(int);
 
 int main(void)
 {
@@ -24,18 +25,13 @@ int main(void)
 	return 0;
 }
 
-
 // Return the largest digit pair in n
 int largest_digit_pair(int n)
 {
-	int val;
-	if(n >= 100)
+	if (n >= 100)
 	{
-		return val = fmax((n % 100), largest_digit_pair(n / 100));
+		return fmax((n % 100), largest_digit_pair(n / 100));
 	}
-	else
-	{
-		return n;
-	}
+	
+	return n;
 }
-

@@ -5,9 +5,10 @@
 // is given by the recursive formula.
 //
 // SHEIKH UMAR
+
 #include <stdio.h>
 
-int f(int x);
+int f(int);
 
 int main(void)
 {
@@ -26,13 +27,13 @@ int main(void)
 // Calculate sum according to recursive formula
 int f(int x)
 {
-	if(x >= 0 && x <= 2)
+	if (x >= 0 && x <= 2)
 	{
 		return 1;
 	}
 	else
 	{
-		if(x % 2 == 0)
+		if (x % 2 == 0)
 		{
 			return (f(x - 1) + f(x - 2) + f(x - 3));
 		}
@@ -42,4 +43,3 @@ int f(int x)
 		}
 	}
 }
-

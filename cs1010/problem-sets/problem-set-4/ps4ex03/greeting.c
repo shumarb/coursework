@@ -6,13 +6,13 @@
 //
 // SHEIKH UMAR
 
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 
 int main(void)
 {
+	char gender;	
 	int age;
-	char gender;
 
 	printf("Your age? ");
 	scanf("%d", &age);
@@ -22,9 +22,9 @@ int main(void)
 
 	gender = toupper(gender);
 
-	if(age < 18)
+	if (age < 18)
 	{
-		if(gender == 'M')
+		if (gender == 'M')
 		{
 			printf("Hello boy\n");
 		}
@@ -35,7 +35,7 @@ int main(void)
 	}
 	else
 	{
-		if(gender == 'M')
+		if (gender == 'M')
 		{
 			printf("Hello Mr.\n");
 		}
@@ -47,4 +47,3 @@ int main(void)
 	
 	return 0;
 }
-

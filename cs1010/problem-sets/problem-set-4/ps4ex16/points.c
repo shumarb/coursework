@@ -7,9 +7,8 @@
 //
 // SHEIKH UMAR
 
-#include <stdio.h>
 #include <math.h>
-
+#include <stdio.h>
 #define PI 3.14159
 #define MAX_NUM 10  // max number of points
 
@@ -17,13 +16,13 @@ typedef struct {
 	int x, y;
 } point_t;
 
-int read_points(point_t pts[]);
 double compute_circle_area(point_t pts[], int numPts);
+int read_points(point_t pts[]);
 
 int main(void)
 {
-	int numPts;  // actual number of points read in
 	double area;
+	int numPts; 
 	point_t pts[MAX_NUM];
 
 	numPts = read_points(pts);
@@ -38,31 +37,30 @@ int main(void)
 // Return the number of points read
 int read_points(point_t pts[])
 {
-	int j, num;
+	int j, number_of_points;
 
 	printf("Enter the number of points: ");
-	scanf("%d", &num);
+	scanf("%d", &number_of_points);
 
-	printf("Enter x- and y-coordinates for points:\n");
-	for(j = 0; j < num; j++)
+	printf("Enter x- and y-coordinates for %d points:\n", number_of_points);
+	for (j = 0; j < number_of_points; j++)
 	{
 		scanf("%d %d", &pts[j].x, &pts[j].y);
 	}
 
-	return num;
+	return number_of_points;
 }
 
 // Calculate the area of surrounding circle
 double compute_circle_area(point_t pts[], int numPts)
 {
+	double radius = sqrt(pow(pts[0].x, 2.0) + pow(pts[0].y,2.0));
 	int j;
-	double rad = sqrt(pow(pts[0].x, 2.0) + pow(pts[0].y,2.0));
 
-	for(j = 1; j < numPts; j++)
+	for (j = 1; j < numPts; j++)
 	{
-		rad = fmax(rad, sqrt(pow(pts[j].x, 2.0) + pow(pts[j].y, 2.0)));
+		radius = fmax(radius, sqrt(pow(pts[j].x, 2.0) + pow(pts[j].y, 2.0)));
 	}
 
-	return (rad * rad * PI);
+	return (radius * radius * PI);
 }
-

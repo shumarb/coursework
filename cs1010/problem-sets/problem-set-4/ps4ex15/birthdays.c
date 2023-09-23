@@ -14,8 +14,8 @@ typedef struct {
 	int day, month;
 } date_t;
 
-int read_birthdays(date_t bday[]);
-int share_birthday(date_t bday[], int num);
+int read_birthdays(date_t []);
+int share_birthday(date_t [], int);
 
 int main(void)
 {
@@ -24,7 +24,7 @@ int main(void)
 
 	printf("Group of %d having same birthday: ", input);
 
-	if(share_birthday(birthdays, input))
+	if (share_birthday(birthdays, input))
 	{
 		printf("Yes\n");
 	}
@@ -46,7 +46,7 @@ int read_birthdays(date_t bday[])
 	scanf("%d", &input);
 
 	printf("Enter %d birthdays, day followed by month each:\n", input);
-	for(j = 0; j < input; j++)
+	for (j = 0; j < input; j++)
 	{
 		scanf("%d %d", &bday[j].day, &bday[j].month);
 	}
@@ -60,11 +60,11 @@ int share_birthday(date_t bday[], int num)
 {
 	int j, k;
 
-	for(j = 0; j < num; j++)
+	for (j = 0; j < num; j++)
 	{
-		for(k = j + 1; k < num; k++)
+		for (k = j + 1; k < num; k++)
 		{
-			if((bday[j].day == bday[k].day) && (bday[j].month == bday[k].month))
+			if ((bday[j].day == bday[k].day) && (bday[j].month == bday[k].month))
 			{
 				return 1;
 			}
@@ -73,4 +73,3 @@ int share_birthday(date_t bday[], int num)
 
 	return 0;
 }
-
