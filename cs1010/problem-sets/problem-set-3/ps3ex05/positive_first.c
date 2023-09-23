@@ -4,13 +4,14 @@
 // This program tests if all the positive
 // number (if any) appear before all the
 // non-positive numbers (if any) in an array.
-// SHEIKH UMAR A0149874L
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 #include <math.h>
 #define MAX_LEN 9 
 
-int is_positive_first(int numbers[], int size);
+int is_positive_first(int [], int);
 
 int main(void)
 {
@@ -58,4 +59,3 @@ int is_positive_first(int numbers[], int size)
 	
 	return 1;
 }
-
