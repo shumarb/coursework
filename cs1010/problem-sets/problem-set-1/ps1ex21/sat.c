@@ -14,8 +14,8 @@
 #include <stdio.h>
 
 // function prototypes
-int compute_percentile(int verbal, int maths, int writing);
-double compute_iqscore(int verbal, int maths);
+int compute_percentile(int, int, int);
+double compute_iqscore(int, int);
 
 int main(void)
 {
@@ -49,38 +49,28 @@ int main(void)
 int compute_percentile(int verbal, int maths, int writing)
 {
 	int score;
-	int percentile;
 	score = verbal + maths + writing;
 	
 	if (score < 1500)
 	{
-		percentile = 10;
+		return 10;
 	}
 
 	else if (score >= 1500 && score < 2000)
 	{
-		percentile = 50;
+		return 50;
 	}
 
 	else if (score >= 2000 && score < 2200)
 	{
-		percentile = 95;
+		return 95;
 	}
 	
-	else
-	{
-		percentile = 99;
-	}
-
-	return percentile;
+	return 99;
 }
 
 // Function computes the IQ score based on verbal and maths scores only
 double compute_iqscore(int verbal, int maths)
 {
-	double i;
-	i = (0.095 * maths) + (0.003 * verbal) + 50.241;
-	
-	return i;
+	return (0.095 * maths) + (0.003 * verbal) + 50.241;
 }
-
