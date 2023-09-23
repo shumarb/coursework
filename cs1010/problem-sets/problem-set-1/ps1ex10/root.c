@@ -4,6 +4,7 @@
 // Program takes in the values of a, b, c.
 // These values correspond to a(x^2) + bx + c of a quadratic equation.
 // Program calculates the roots of this equation, and prints out the bigger root
+//
 // SHEIKH UMAR
 
 #include <stdio.h>

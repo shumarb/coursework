@@ -3,6 +3,8 @@
 //
 // Program reads in an amount, and finds the least number of S$1,
 // 50-,20-,10-,5-, and 1-cent coints to use that reflects that amount
+//
+// SHEIKH UMAR
 
 #include <stdio.h>
 

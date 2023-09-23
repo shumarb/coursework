@@ -3,7 +3,6 @@
 //
 // Program computes total bill based on a menu price
 //
-//
 // SHEIKH UMAR
 
 #include <stdio.h>
