@@ -10,7 +10,7 @@
 #include <stdio.h>
 
 // function prototype
-int get_max(int num1, int num2, int num3);
+int get_max(int, int, int);
 
 int main(void)
 {
@@ -27,11 +27,11 @@ int main(void)
 // Return the max value among the three inputs
 int get_max(int num1, int num2, int num3)
 {
-	if((num1 > num2) && (num1 > num3))
+	if ((num1 > num2) && (num1 > num3))
 	{
 		return num1;
 	}
-	else if((num2 > num1) && (num2 > num3))
+	else if ((num2 > num1) && (num2 > num3))
 	{
 		return num2; 
 	}
@@ -40,4 +40,3 @@ int get_max(int num1, int num2, int num3)
 		return num3;
 	}
 }
-
