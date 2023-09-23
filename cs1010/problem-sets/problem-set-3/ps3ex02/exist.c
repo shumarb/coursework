@@ -57,4 +57,3 @@ int contains(int arr[], int size, int k)
 
 	return 0;
 }
-

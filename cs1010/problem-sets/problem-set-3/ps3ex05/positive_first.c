@@ -19,7 +19,7 @@ int main(void)
 	printf("Enter the number of elements: ");
 	scanf("%d", &size);
 
-	if(is_positive_first(numbers, size) == 1)
+	if (is_positive_first(numbers, size) == 1)
 	{
 		printf("All positive numbers appear before non-positive numbers\n");
 	}
@@ -37,18 +37,18 @@ int is_positive_first(int numbers[], int size)
 	int i, j; 
 
 	printf("Enter %d elements: ", size);
-	for(i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		scanf("%d", &numbers[i]);
 	}
 
-	for(i = 0; i < (size - 1); i++)
+	for (i = 0; i < (size - 1); i++)
 	{
-		if(numbers[i] <= 0)
+		if (numbers[i] <= 0)
 		{
-			for(j = (i + 1); j < size; j++)
+			for (j = (i + 1); j < size; j++)
 			{
-				if(numbers[j] > 0)
+				if (numbers[j] > 0)
 				{
 					return 0; // A positive number found after non-negative number
 				}

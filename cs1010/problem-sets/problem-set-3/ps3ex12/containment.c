@@ -36,7 +36,7 @@ int main(void) {
 void scan_array(int arr[], int size) {
 	int i;
 	printf("\tEnter %d values: ",size);
-	for(i=0;i<size;i++){
+	for (i=0;i<size;i++){
 		scanf("%d",&arr[i]);
 	}
 }	
@@ -44,9 +44,9 @@ void scan_array(int arr[], int size) {
 // Check whether arrA is a subset of arrB.
 int is_subset(int arrA[], int sizeA, int arrB[], int sizeB) {
 	int i,j,count=0;
-	for(i=0;i<sizeA;i++){
-		for(j=0;j<sizeB;j++){
-			if(arrA[i]==arrB[j]){
+	for (i=0;i<sizeA;i++){
+		for (j=0;j<sizeB;j++){
+			if (arrA[i]==arrB[j]){
 				count++;
 			}
 		}

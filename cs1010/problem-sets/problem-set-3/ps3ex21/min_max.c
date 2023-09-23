@@ -20,9 +20,9 @@ int main(void) {
 	printf("Enter the size of the matrix: ");
 	scanf("%d %d", &row, &col);
 	printf("Enter elements row by row:\n");
-	for(i = 0; i < row; i++)
+	for (i = 0; i < row; i++)
 	{
-		for(j = 0; j <col; j++)
+		for (j = 0; j <col; j++)
 		{
 			scanf("%d", &mtx[i][j]);
 		}
@@ -42,22 +42,22 @@ void get_min_max(int mtx[][NCOLS], int num_rows, int num_cols, int *min_p, int *
 	int i, j;
 	*min_p = *max_p = mtx[0][0];
 
-	for(i = 0; i < num_rows; i++)
+	for (i = 0; i < num_rows; i++)
 	{
-		for(j = 0; j < num_cols; j++)
+		for (j = 0; j < num_cols; j++)
 		{
-			if(mtx[i][j] > *max_p)
+			if (mtx[i][j] > *max_p)
 			{
 				*max_p = mtx[i][j];
 			}
 		}
 	}
 
-	for(i = 0; i < num_rows; i++)
+	for (i = 0; i < num_rows; i++)
 	{
-		for(j = 0; j < num_cols; j++)
+		for (j = 0; j < num_cols; j++)
 		{
-			if(mtx[i][j] < *min_p)
+			if (mtx[i][j] < *min_p)
 			{
 				*min_p = mtx[i][j];
 			}
