@@ -4,14 +4,14 @@
 // This program reports the minimum and
 // maximum elements in a given matrix.
 //
-// SHEIKH UMAR A0149874L
+// SHEIKH UMAR
 
-#include <stdio.h>
 #include <math.h>
-#define NROWS 10
+#include <stdio.h>
 #define NCOLS 10
+#define NROWS 10
 
-void get_min_max(int mtx[NROWS][NCOLS], int num_rows, int num_cols, int *min_p, int *max_p);
+void get_min_max(int [NROWS][NCOLS], int, int, int *, int *);
 
 int main(void) {
 	int mtx[NROWS][NCOLS];
@@ -64,4 +64,3 @@ void get_min_max(int mtx[][NCOLS], int num_rows, int num_cols, int *min_p, int *
 		}
 	}
 }
-

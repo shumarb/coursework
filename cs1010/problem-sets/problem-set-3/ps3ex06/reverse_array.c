@@ -30,7 +30,7 @@ int read_array(int arr[])
 	scanf("%d", &size);
 
 	printf("Enter %d values: ", size);
-	for(i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		scanf("%d", &arr[i]);
 	}
