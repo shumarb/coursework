@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 
-int main(void) {
-
+int main(void)
+{
 	double gst, net_price, service_charge;
 
 	printf("Enter menu price: $");

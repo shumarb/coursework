@@ -10,9 +10,9 @@
 
 int main(void)
 {
+	int f1, f2, f3, f4;
 	int l1, s1, e1;
 	int l2, s2, e2;
-	int f1, f2, f3, f4;
 	int t1, t2, t3, t4;
 	int total_1, total_2;
 	
@@ -34,7 +34,7 @@ int main(void)
 		f2 *= -1;
 	}
 	t2 = (f2 * 2);
-
+	
 	total_1 = (t1 + t2);
 
 	// second instruction

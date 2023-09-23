@@ -7,8 +7,8 @@
 //
 // SHEIKH UMAR
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 // function prototypes
 double compute_AM(int, int, int);
@@ -35,4 +35,3 @@ double compute_AM(int num1, int num2, int num3) {
 double compute_GM(int num1, int num2, int num3) {
 	return cbrt(num1 * num2 * num3);
 }
-

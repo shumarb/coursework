@@ -14,12 +14,11 @@
 #include <stdio.h>
 
 // function prototypes
-int compute_percentile(int, int, int);
 double compute_iqscore(int, int);
+int compute_percentile(int, int, int);
 
 int main(void)
 {
-
 	int verbal, maths, writing;
 	int percentage; // percentile of the SAT score
 	double iq;      // IQ score
@@ -48,8 +47,7 @@ int main(void)
 // Function computes SAT score, then identifies and prints out the corresponding percentile
 int compute_percentile(int verbal, int maths, int writing)
 {
-	int score;
-	score = verbal + maths + writing;
+	int score = verbal + maths + writing;
 	
 	if (score < 1500)
 	{

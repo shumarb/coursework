@@ -7,30 +7,28 @@
 //
 // SHEIKH UMAR
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 // function prototype
-double get_root(double a, double b, double c);
+double get_root(double, double, double);
 
-int main(void) {
-
+int main(void) 
+{
 	double a, b, c, root;
 
 	printf("Enter coefficients (a b c): ");
 	scanf("%lf %lf %lf", &a, &b, &c);
 	
 	root = get_root(a, b, c);
-
 	printf("Bigger root is %.2f\n", root);
 
 	return 0;
 }
 
 // Take three coefficients and return the bigger root
-double get_root(double a, double b, double c) {
-	
-	// Declare 2 double variables as the 2 roots
+double get_root(double a, double b, double c) 
+{	
 	double x1, x2;
 
 	// Use golden formula for each root
@@ -38,13 +36,12 @@ double get_root(double a, double b, double c) {
 	x2 = ((-b) - sqrt(pow(b, 2) - (4 * a * c))) / (2 * a);
 	
 	// Compare x1 and x2, return the bigger value
-	if(x1 < x2)
+	if (x1 < x2)
 	{
 		return x2;
-	}
+	} 
 	else
 	{
 		return x1;
 	}
 }
-

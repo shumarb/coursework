@@ -8,20 +8,16 @@
 
 #include <stdio.h>
 
-int main(void) {
-
-	double john, mary, tom, kate;
+int main(void) 
+{
+	double john, kate, mary, tom;
 
 	printf("Enter the heights for John and Mary: ");
-
-	//User enters heights of John & Mary
 	scanf("%lf %lf", &john, &mary);
 
-	//Calculation for Tom's height
 	tom = (0.54 * (john + mary));
 	printf("Height for Tom: %.2f\n", tom);
 
-	//Calculation for Kate's height
 	kate = 0.5 * (mary + (john * 0.923));
 	printf("Height for Kate: %.2f\n", kate);
 

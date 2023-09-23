@@ -8,9 +8,9 @@
 
 #include <stdio.h>
 
-int main(void) {
-
-	int length, width, height, volume;
+int main(void) 
+{
+	int height, length, volume, width;
 
 	printf("Enter length: ");
 	scanf("%d", &length);
@@ -23,7 +23,6 @@ int main(void) {
 
 	// correct the following two statements
 	volume = length * width * height;
-
 	printf("Volume = %d\n", volume);
 
 	return 0;

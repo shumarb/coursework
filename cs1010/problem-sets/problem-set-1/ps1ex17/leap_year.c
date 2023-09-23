@@ -29,6 +29,7 @@ int main(void)
 		// Else print this out if year is not a leap year
 		printf("%d is not a leap year.\n", year);
 	}
+	
 	return 0;
 }
 
@@ -45,4 +46,3 @@ int is_leap_year(int year)
 
 	return 0;
 }
-

@@ -48,7 +48,7 @@ int main(void)
 
 		// Calculate number of 1c required
 		num_1c = remaining;
-	}
+	} 
 	else
 	{
 		// Calculate number of 10c required
@@ -74,4 +74,3 @@ int main(void)
 
 	return 0;
 }
-

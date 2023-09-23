@@ -12,21 +12,19 @@
 #include <stdio.h>
 
 // function prototype
-int get_magic(int num);
+int get_magic(int);
 
-int main(void) {
-
+int main(void) 
+{
 	/** main function is complete **/
 
 	int num, digit;
 
-	// process first number
 	printf("Enter 1st number: ");
 	scanf("%d", &num);
 	digit = get_magic(num);
 	printf("Magic digit = %d\n",digit);
 
-	// process second number
 	printf("Enter 2nd number: ");
 	scanf("%d", &num);
 	digit = get_magic(num);
@@ -36,8 +34,8 @@ int main(void) {
 }
 
 // Take a number and return the magic digit 
-int get_magic(int num) {
-	
+int get_magic(int num) 
+{	
 	// Obtain fifth-placed digit by modulo division
 	int fifth_digit = num % 10;
 	
@@ -56,4 +54,3 @@ int get_magic(int num) {
 	//Return magic_digit to main function
 	return magic_digit;
 }
-

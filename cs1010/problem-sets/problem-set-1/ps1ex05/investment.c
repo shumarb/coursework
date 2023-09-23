@@ -7,13 +7,13 @@
 //
 // SHEIKH UMAR
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
-int main(void) {
-
+int main(void) 
+{
+	double amount; // Amount of money earned after num_years
 	int principal, rate, num_years;
-	double amount; //Amount of money earned after num_years
 
 	printf("Enter principal amount: ");
 	scanf("%d", &principal);
@@ -24,17 +24,9 @@ int main(void) {
 	printf("Enter number of years : ");
 	scanf("%d", &num_years);
 
-	// rate is in integer. Hence, rate/100 = 0 (nearest integer is rate<100)
-	// Hence, create new variable that stores rate as a double
 	double new_rate = (double) (rate / 100.00);
-
-	// Create new variable to store value of num_years increased by 1
-	int new_num_years = (num_years + 1);
-
-	// Calculation to find amount
-	amount = (principal * (1 - pow(new_rate, new_num_years))) / (1 - (new_rate));
-
-	// Print out result
+	amount = (principal * (1 - pow(new_rate, (num_years + 1)))) / (1 - (new_rate));
+	
 	printf("Amount = $%.2lf\n", amount);
 
 	return 0;

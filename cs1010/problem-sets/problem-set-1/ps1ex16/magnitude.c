@@ -19,14 +19,17 @@ int main(void)
 	{
 		printf("Classification: Minor\n");
 	} 
+	
 	else if (magnitude >= 4.0 && magnitude < 6.0)
 	{
 		printf("Classification: Moderate\n");
 	}
+
 	else if (magnitude >= 6.0 && magnitude < 6.9)
 	{
 		printf("Classification: Strong\n");
 	} 
+
 	else 
 	{
 		printf("Classification: Major\n");
@@ -34,4 +37,3 @@ int main(void)
 
 	return 0;
 }
-

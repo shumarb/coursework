@@ -11,10 +11,11 @@
 #include <stdio.h>
 
 // function prototypes
-int compute_surface_area(int, int , int);
 double compute_diagonal(int, int, int);
+int compute_surface_area(int, int , int);
 
-int main(void) {
+int main(void) 
+{
 	int length, width, height;
 
 	printf("Enter length: ");
@@ -51,5 +52,3 @@ double compute_diagonal(int length, int width, int height) {
 	double c = pow(length, 2) + pow(width, 2);
 	return sqrt(pow(height, 2) + c);
 }
-
-		     

@@ -7,20 +7,18 @@
 //
 // SHEIKH UMAR
 
-#include <stdio.h>
 #include <math.h> // to use sqrt() function
+#include <stdio.h>
 
 int main(void)
 {
-	double opposite, adjacent, hypothenuse;
+	double adjacent, hypothenuse, opposite;
 
 	printf("Enter a and b: ");
 	scanf("%lf %lf", &opposite, &adjacent);
 
-	//Calculation for hypothenuse
 	hypothenuse = sqrt(pow(opposite, 2) + pow(adjacent, 2));
 	printf("c = %.2lf\n", hypothenuse);
 
 	return 0;
 }
-

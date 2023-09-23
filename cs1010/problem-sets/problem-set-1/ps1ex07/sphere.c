@@ -10,8 +10,8 @@
 #include <stdio.h>
 #define PI 3.1415
 
-int main(void) {
-
+int main(void) 
+{
 	double diameter, radius;
 
 	printf("Enter diameter: ");
