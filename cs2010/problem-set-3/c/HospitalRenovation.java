@@ -73,7 +73,7 @@ class HospitalRenovation {
         HashMap<Integer, Integer> vertexRating = new HashMap<Integer, Integer>();
         for(int i = 0; i<V; i++) {
             int rating = sc.nextInt();
-            vertexRating.put(new Integer(i), new Integer(rating));
+            vertexRating.put(i, rating);
         }
         if(test) {
             System.out.println("vertexRating: " + vertexRating);
