@@ -12,7 +12,7 @@
 #include <stdio.h>
 
 // function prototype
-int body_type(int gender, double weight, double height);
+int body_type(int, double, double);
 
 int main(void)
 {
@@ -26,13 +26,13 @@ int main(void)
 	scanf("%lf %lf", &weight, &height);
 	
 	// Print out advise based on body type, regardless of gender
-	if(body_type(gender, weight, height) == -1)
+	if (body_type(gender, weight, height) == -1)
 	{
 		printf("Stuff yourself with more food!\n");
 	}
 	
 	// Print out advise for acceptable
-	else if(body_type(gender,weight,height) == 0)
+	else if (body_type(gender,weight,height) == 0)
 	{
 		printf("Great! Maintain it!\n");
 	}
@@ -50,23 +50,25 @@ int main(void)
 int body_type(int gender, double weight, double height)
 {
 	// Calculate bmi
-	double bmi = (weight / (height * height));
 	int weight_class;
+	double bmi = (weight / (height * height));
 
 	// Assign weight class for female
-	if(gender == 0)
+	if (gender == 0)
 	{
 		// If bmi is less than or equal to 19, weight class is underweight
-		if(bmi <= 19.00)
+		if (bmi <= 19.00)
 		{
 			weight_class = -1;
 		}
+
 		// If bmi is between 19 and up to and including 24, body type is acceptable
-		else if((bmi > 19) && (bmi <= 24))
+		else if ((bmi > 19) && (bmi <= 24))
 		{
 			weight_class = 0;
 		}
-		//If above two conditions are not satisfied, body type is overweight
+
+		// If above two conditions are not satisfied, body type is overweight
 		else
 		{
 			weight_class = 1;
@@ -81,11 +83,13 @@ int body_type(int gender, double weight, double height)
 		{
 			weight_class = -1;
 		}
+
 		// If bmi is between 19 and up to and including 24, body type is acceptable
 		else if((bmi > 20.00) && (bmi <= 25.00))
 		{
 			weight_class = 0;
 		}
+
 		// If above two conditions are not satisfied, body type is overweight
 		else
 		{
@@ -95,4 +99,3 @@ int body_type(int gender, double weight, double height)
 	
 	return weight_class;
 }
-
