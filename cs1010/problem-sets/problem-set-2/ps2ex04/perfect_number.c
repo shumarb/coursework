@@ -10,23 +10,22 @@
 #include <stdio.h>
 
 int main(void) {
-	int i, n;
-	int sum = 0;
+	int i, n, sum = 0;
 	
 	printf("Enter a positive integer: ");
 	scanf("%d", &n);
 
 	// Sum: Add up the multiples of n
-	for(i = 1; i <= (n / 2); i++)
+	for (i = 1; i <= (n / 2); i++)
 	{
-		if((n % i) == 0)
+		if ((n % i) == 0)
 		{
 			sum += i;
 		}
 	}
 
 	// if sum = n. If yes, it is a perfect number
-	if(n == sum)
+	if (n == sum)
 	{
 		printf("%d is a perfect number.\n", n);
 	}
@@ -36,4 +35,3 @@ int main(void) {
 	}
 	return 0;
 }
-

@@ -4,6 +4,7 @@
 // Program reads in an integer, and prints out its digits
 //
 // SHEIKH UMAR
+
 #include <stdio.h>
 
 void print_digits(int num); // function prototype
@@ -35,4 +36,3 @@ void print_digits(int num)
 	
 	printf("\n");  // change line
 }
-

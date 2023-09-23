@@ -6,15 +6,16 @@
 // Program prints out age that meets criteria and number of attempts needed
 //
 // SHEIKH UMAR
+
 #include <stdio.h>
 
 int main(void)
 {
-	int age, counter = 0;
+	int age, count = 0;
 
 	printf("Enter age: ");
 	scanf("%d", &age);
-	counter++;
+	count++;
 	
 	// Keep asking for age if it falls out of range.
 	// Increase counter for every input entered.
@@ -22,12 +23,11 @@ int main(void)
 	{
 		printf("Enter age: ");
 		scanf("%d", &age);
-		counter++;
+		count++;
 	}
 
 	printf("Your age is %d\n", age);
-	printf("Number of attempts = %d\n", counter);
+	printf("Number of attempts = %d\n", count);
 
 	return 0;
 }
-
