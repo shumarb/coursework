@@ -67,7 +67,7 @@ class LinkedList<E> {
 		return 0;
 	}
     
-    public ListNode<E> getLast(){
+    public ListNode<E> getLast() {
         return this.tail;
     }
     

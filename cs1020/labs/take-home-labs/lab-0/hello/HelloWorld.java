@@ -14,7 +14,7 @@ public class HelloWorld {
         
         if (method == 2) {
             meth2(sc);
-        } else if(method == 3) {
+        } else if (method == 3) {
             meth3(sc);
         } else{
             meth1(sc);
@@ -28,7 +28,7 @@ public class HelloWorld {
         String gate;
 
         rounds = sc.nextInt();
-        for(i = 0; i < rounds; i++) {
+        for (i = 0; i < rounds; i++) {
             gate = sc.next();
             a = sc.nextInt();
             b = sc.nextInt();

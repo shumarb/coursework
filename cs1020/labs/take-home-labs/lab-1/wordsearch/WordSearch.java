@@ -15,7 +15,7 @@ public class WordSearch{
     // Display number of times word is found in grid.
     // Precon: Word has been search in all possible directions in grid.
     // Postcon: Nil.
-    private void displaysResult(){
+    private void displaysResult() {
         System.out.println(count);
     }
 
@@ -23,22 +23,22 @@ public class WordSearch{
     // Precon: Word formed's length is >= word's length
     // Poston: Count increases after word formed from grid is checked
     // with word and/or wordRev.
-    private void check(String form){
+    private void check(String form) {
         int start = 0;
 
-        while( (form.length()-start) >= word.length() ) {
+        while ( (form.length()-start) >= word.length() ) {
             String form2 = "";
             int end = start+word.length();
 
-            for(int i = start; i < end; i++){
+            for (int i = start; i < end; i++) {
                 form2 += form.charAt(i);
             }
 
-            if(isTest) {
+            if (isTest) {
                 System.out.println("form2 = " + form2);
             }
 
-            if(form2.contains(word) || form2.contains(wordRev)) {
+            if (form2.contains(word) || form2.contains(wordRev)) {
                 count += 1;
             }
 
@@ -49,22 +49,22 @@ public class WordSearch{
     // Check for appearance of word & worfRev in north-east diagonals.
     // Precon: Word & wordRev have been checked in rows, cols, and north-west diagonals of grid.
     // Postcon: Count has increased.
-    private void checksDiagonal2(char[][] grid){
+    private void checksDiagonal2(char[][] grid) {
         int i = 1;
         int j = 0;
         int k = 1;
 
-        while(i < grid.length){
+        while (i < grid.length) {
             String form = "";
-            while(i >= 0 && j < grid.length) {
+            while (i >= 0 && j < grid.length) {
                 form += grid[i--][j++];
             }
 
-            if(isTest) {
+            if (isTest) {
                 System.out.println("form = " + form);
             }
 
-            if(form.length() >= word.length()) {
+            if (form.length() >= word.length()) {
                 check(form);
             }
             k += 1;
@@ -76,15 +76,15 @@ public class WordSearch{
         j = 1;
         k = 1;
 
-        while(j < (grid.length - 1)) {
+        while (j < (grid.length - 1)) {
             String form = "";
-            while(i >= 0 && j < grid.length) {
+            while (i >= 0 && j < grid.length) {
                 form += grid[i--][j++];
             }
-            if(isTest) {
+            if (isTest) {
                 System.out.println("form = " + form);
             }
-            if(form.length() >= word.length()) {
+            if (form.length() >= word.length()) {
                 check(form);
             }
 
@@ -102,17 +102,17 @@ public class WordSearch{
         int j = 1;
         int k = 1;
 
-        while(j < grid.length) {
+        while (j < grid.length) {
             String form = "";
-            while(i >= 0 && j >= 0) {
+            while (i >= 0 && j >= 0) {
                 form += grid[i][j];
                 i -= 1;
                 j -= 1;
             }
-            if(isTest) {
+            if (isTest) {
                 System.out.println("form = " + form);
             }
-            if(form.length() >= word.length()) {
+            if (form.length() >= word.length()) {
                 check(form);
             }
             i = grid.length - 1;
@@ -123,21 +123,21 @@ public class WordSearch{
         i = grid.length - 2;
         k = grid.length - 2;
         j = grid.length - 1;
-        if(isTest) {
+        if (isTest) {
             System.out.println("i = " + i + ", k = " + k + ", j = " + j);
         }
 
-        while(i > 0) {
+        while (i > 0) {
             String form = "";
-            while(i >= 0 && j >= 0) {
+            while (i >= 0 && j >= 0) {
                 form += grid[i--][j--];
             }
 
-            if(isTest) {
+            if (isTest) {
                 System.out.println("form = " + form);
             }
 
-            if(form.length() >= word.length()) {
+            if (form.length() >= word.length()) {
                 check(form);
             }
 
@@ -151,15 +151,15 @@ public class WordSearch{
     // Precon: Grid contains all characters derived from string that user entered.
     // Postcon: Count has increased
     private void checksRows(char[][] grid) {
-        for(int i = 0; i < grid.length; i++) {
+        for (int i = 0; i < grid.length; i++) {
             String form = "";
-            for(int j = 0; j < grid.length; j++) {
+            for (int j = 0; j < grid.length; j++) {
                 form += grid[i][j];
             }
-            if(isTest) {
+            if (isTest) {
                 System.out.println("form = " + form);
             }
-            if(form.length() >= word.length()) {
+            if (form.length() >= word.length()) {
                 check(form);
             }
         }
@@ -169,15 +169,15 @@ public class WordSearch{
     // Precon: Grid contains all characters derived from string that user entered.
     // Postcon: Count has increased
     private void checksCols(char[][] grid) {
-        for(int i = 0; i < grid.length; i++) {
+        for (int i = 0; i < grid.length; i++) {
             String form = "";
-            for(int j = 0; j < grid.length; j++) {
+            for (int j = 0; j < grid.length; j++) {
                 form += grid[j][i];
             }
-            if(isTest) {
+            if (isTest) {
                 System.out.println("form = " + form);
             }
-            if(form.length() >= word.length()) {
+            if (form.length() >= word.length()) {
                 check(form);
             }
         }
@@ -190,8 +190,8 @@ public class WordSearch{
         System.out.println();
         System.out.println("Grid: ");
 
-        for(int i = 0; i < grid.length; i++) {
-            for(int j = 0; j < grid.length; j++) {
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid.length; j++) {
                 System.out.print(grid[i][j] + " ");
             }
             System.out.println();
@@ -206,11 +206,11 @@ public class WordSearch{
     private void readsWord() {
         word = sc.next();
 
-        for(int i = word.length() - 1; i >= 0; i--) {
+        for (int i = word.length() - 1; i >= 0; i--) {
             wordRev += word.charAt(i);
         }
 
-        if(isTest) {
+        if (isTest) {
             System.out.println("Word = " + word + ", wordRev = " + wordRev);
         }
     }
@@ -220,7 +220,7 @@ public class WordSearch{
     // Postcon read in characters for grid
     private char[][] formsGrid() {
         int N = sc.nextInt();
-        if( isTest ){
+        if (isTest) {
             System.out.println("N = " + N);
         }
         return new char[N][N];        
@@ -230,21 +230,21 @@ public class WordSearch{
     // Precon: Grid cells are null.
     // Postcon: Grid cells contain a character (entered as a string) entered from user.
     private void readsGrid(char[][] grid) {
-        for(int i = 0; i < grid.length; i++) {
+        for (int i = 0; i < grid.length; i++) {
             String readWord = sc.next();
-            if(isTest){
+            if (isTest) {
                 System.out.println("readWord = " + readWord);
             }
-            for(int j = 0; j < grid.length; j++) {
+            for (int j = 0; j < grid.length; j++) {
                 grid[i][j] = readWord.charAt(j);
             }
         }
-        if(isTest) {
+        if (isTest) {
             printGrid(grid);
         }
     }
 
-    private void run(){
+    private void run() {
         readsWord();
         char[][] grid = formsGrid();
         readsGrid(grid);
@@ -255,7 +255,7 @@ public class WordSearch{
         displaysResult();
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         WordSearch obj = new WordSearch();
         obj.run();
     }

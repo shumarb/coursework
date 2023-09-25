@@ -49,7 +49,7 @@ class Land {
             }
         }
 
-        if(isTest) {
+        if (isTest) {
             disp(grid);
         }
 
@@ -104,7 +104,7 @@ class Land {
             System.out.println("numBlack = " + numBlack);
         }
 
-        for(int i = 0; i < numBlack; i++) {
+        for (int i = 0; i < numBlack; i++) {
             int length = sc.nextInt();
             int breadth = sc.nextInt();
             if (isTest) {
@@ -114,7 +114,7 @@ class Land {
             grid[length - 1][breadth - 1] = -1;
         }
         
-        if(isTest) {
+        if (isTest) {
             disp(grid);
         }
     }
@@ -125,7 +125,7 @@ class Land {
     private int[][] formsGrid() {
         int size = sc.nextInt();
         int[][]grid = new int[size][size];
-        if(isTest) {
+        if (isTest) {
             disp(grid);
         }
 

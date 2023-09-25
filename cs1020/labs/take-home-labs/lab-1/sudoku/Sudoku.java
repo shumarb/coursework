@@ -15,7 +15,7 @@ public class Sudoku {
     // values of matrix
     // Postcon: Matrix contains all entries from user
     private void read(int[][]mat, int size) {
-        if(isTest) {
+        if (isTest) {
             System.out.println("Enter entries: ");
         }
 
@@ -29,7 +29,7 @@ public class Sudoku {
         if (isTest) {
             System.out.println("matrix after reading in values ");
             for (int x = 0; x < size; x++) {
-                for(int y = 0; y < size; y++) {
+                for (int y = 0; y < size; y++) {
                     System.out.print( mat[x][y] + " " );
                 }
                 System.out.println();
@@ -94,7 +94,7 @@ public class Sudoku {
 
             if (isTest) {
                 System.out.print("row: ");
-                for(int d = 0; d < size; d++) {
+                for (int d = 0; d < size; d++) {
                     System.out.print(row[d] + " ");
                 }
                 System.out.println();
@@ -114,17 +114,17 @@ public class Sudoku {
     private boolean passCol(int[][]mat, int size) {
         boolean isProceed = true;
 
-        for(int a = 0; a<size && isProceed; a++) {
+        for (int a = 0; a<size && isProceed; a++) {
             int c = 0;
             int[] row = new int[size];
-            for( int b = 0; b < size && isProceed; b++) {
+            for ( int b = 0; b < size && isProceed; b++) {
                 row[c] = mat[b][a];
                 c += 1;
             }
 
-            if( isTest ){
+            if (isTest) {
                 System.out.print("row: ");
-                for(int d = 0; d < size; d++) {
+                for (int d = 0; d < size; d++) {
                     System.out.print(row[d] + " ");
                 }
                 System.out.println();
@@ -141,13 +141,13 @@ public class Sudoku {
     // False when one of the submatrices is invalid, hence matrix is invalid
     // Precon: Matrix has valid row and column entries
     // Postcon: Matrix has valid submatrices
-    private boolean passSubMat(int[][] mat,int size){
+    private boolean passSubMat(int[][] mat,int size) {
         // First 2 loops are based to jump from submatrix in a row and
         // col to the next row and col by N
-        for(int a = 0; a < size; a += N) {
+        for (int a = 0; a < size; a += N) {
             int start = a;
             int endStart = start + N;
-            for(int b = 0; b < size; b += N) {
+            for (int b = 0; b < size; b += N) {
                 int end = b;
                 int endEnd = end + N;
 
@@ -169,9 +169,9 @@ public class Sudoku {
         int f = 0;
 
         // Form submatrix, check submatrix
-        for(int i = start; i < startEnd; i++) {
+        for (int i = start; i < startEnd; i++) {
             f = 0;
-            for(int j = end; j < endEnd; j++) {
+            for (int j = end; j < endEnd; j++) {
                 sub[e][f] = mat[i][j];
                 f += 1; // Go to next column;
             }
@@ -227,8 +227,8 @@ public class Sudoku {
     // Postcon: nil
     private void dispSub(int[][] sub) {
         System.out.println("Submat: ");
-        for(int h = 0; h < N; h++) {
-            for(int p = 0; p < N; p++) {
+        for (int h = 0; h < N; h++) {
+            for (int p = 0; p < N; p++) {
                 System.out.print(sub[h][p] + " ");
             }
             System.out.println();
