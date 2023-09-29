@@ -8,43 +8,40 @@ import java.io.*;
 // year 2018 hash code: h7my92W5hykxBmUZwVxB (do NOT delete this line)
 
 public class Bleeding {
-
-    private int V; // number of vertices in the graph (number of junctions in Singapore map)
-    private int Q; // number of queries
-    private Vector <Vector< IntegerPair >> AdjList; // the weighted graph (the Singapore map), the length of each edge (road) is stored here too, as the weight of edge
-    private PriorityQueue < IntegerPair > pqueue;
     private ArrayList< Integer > dist;
-    private ArrayList< ArrayList < Integer > > twoDAdjList;
-    private int INF = Integer.MAX_VALUE;
+    private ArrayList< ArrayList < Integer > > twoDadjList;
     private boolean test = false;
+    private int INF = Integer.MAX_VALUE;
+    private int Q; // number of queries
+    private int V; // number of vertices in the graph (number of junctions in Singapore map)
+    private PriorityQueue < IntegerPair > priorityQueue;
+    private ArrayList <ArrayList< IntegerPair >> adjList; // the weighted graph (the Singapore map), the length of each edge (road) is stored here too, as the weight of edge
 
     void PreProcess() {
         int iterations = Math.min(10,V);
         if (test) {
             System.out.println("iterations = " + iterations);
         }
-        twoDAdjList = new ArrayList < ArrayList < Integer > >();
+        twoDadjList = new ArrayList < ArrayList < Integer > >();
         for(int i = 0; i < iterations; i++){
-            twoDAdjList.add(new ArrayList < Integer >());
+            twoDadjList.add(new ArrayList <> ());
         }
     }
 
     int Query(int s, int t, int k) {
-
-        if(s == t) {
+        if (s == t) {
             return 0;
         }
 
-        if(twoDAdjList.get(s).size() == 0){
+        if (twoDadjList.get(s).isEmpty()){
             modifiedDijkstra(s);
             // No path from s to t
-            if(twoDAdjList.get(s).get(t) == INF) {
+            if (twoDadjList.get(s).get(t) == INF) {
                 return -1;
             }
-            //return twoDAList.get(s).get(t);
         }
         
-        return twoDAdjList.get(s).get(t);
+        return twoDadjList.get(s).get(t);
     }
     
     /*
@@ -53,11 +50,11 @@ public class Bleeding {
      * Postcon: Distance of source vertex is 0
      */
      private void initSSSP(int source) {
-        dist = new ArrayList < Integer >();
+        dist = new ArrayList <> ();
         dist.addAll(Collections.nCopies(V, INF));
         dist.set(source, 0);
-        pqueue = new PriorityQueue<IntegerPair>();
-        pqueue.add(new IntegerPair(0, source)); //(weight, neighbour node)
+        priorityQueue = new PriorityQueue <> ();
+        priorityQueue.add(new IntegerPair(0, source)); //(weight, neighbour node)
      }
 
     void modifiedDijkstra(int source){
@@ -66,44 +63,44 @@ public class Bleeding {
         initSSSP(source);
         
         // Step 2: Do Dijkstra Algo
-        while(!pqueue.isEmpty()){
+        while (!priorityQueue.isEmpty()){
             
             // Step 2.1: Obtain first element in queue
-            IntegerPair currWeightVert = pqueue.poll();
+            IntegerPair currWeightVert = priorityQueue.poll();
 
-            int currVert = currWeightVert.second();
-            int weight = currWeightVert.first();
+            int currVert = currWeightVert.getsSecond();
+            int weight = currWeightVert.getsFirst();
             if (test) {
                 System.out.println("currVert = " + currVert + ", weight = " + weight);
             }
 
             // Important check
-            if(weight > dist.get(currVert)) {
+            if (weight > dist.get(currVert)) {
                 continue;
             }
             
             // Step 2.2: Obtain neighbours of current vertex,
             // and check if relaxation can be done. If yes,
-            // add neighbour to pqueue
-            Iterator< IntegerPair > iter = AdjList.get(currVert).iterator();
-            while(iter.hasNext()) {
+            // add neighbour to priorityQueue
+            Iterator <IntegerPair> iter = adjList.get(currVert).iterator();
+            while (iter.hasNext()) {
                 IntegerPair p = iter.next();
 
-                int weight_currVert_v = p.second();
-                int v = p.first();
+                int currentVertexWeight = p.getsSecond();
+                int v = p.getsFirst();
                 if (test) {
-                    System.out.println("v = " + v + ", weight = " + weight_currVert_v);
+                    System.out.println("v = " + v + ", weight = " + currentVertexWeight);
                 }
 
-                if(dist.get(v) > dist.get(currVert) + weight_currVert_v ) {
-                    dist.set(v,dist.get(currVert) + weight_currVert_v );
+                if (dist.get(v) > dist.get(currVert) + currentVertexWeight ) {
+                    dist.set(v,dist.get(currVert) + currentVertexWeight );
                     int newDistOfV = dist.get(v);
-                    pqueue.offer(new IntegerPair(newDistOfV, v));
+                    priorityQueue.offer(new IntegerPair(newDistOfV, v));
                 }
             }
         }
         // Update source vertex with the distance value
-        twoDAdjList.set(source,dist);
+        twoDadjList.set(source,dist);
     }
 
     void run() throws Exception {
@@ -116,14 +113,14 @@ public class Bleeding {
             V = sc.nextInt();
 
             // clear the graph and read in a new graph as Adjacency List
-            AdjList = new Vector < Vector < IntegerPair > >();
+            adjList = new ArrayList < ArrayList < IntegerPair > >();
             for (int i = 0; i < V; i++) {
-                AdjList.add(new Vector < IntegerPair >());
+                adjList.add(new ArrayList < IntegerPair >());
 
                 int k = sc.nextInt();
                 while (k-- > 0) {
                     int j = sc.nextInt(), w = sc.nextInt();
-                    AdjList.get(i).add(new IntegerPair(j, w)); // edge (road) weight (in minutes) is stored here
+                    adjList.get(i).add(new IntegerPair(j, w)); // edge (road) weight (in minutes) is stored here
                 }
             }
 
@@ -146,13 +143,7 @@ public class Bleeding {
         Bleeding ps5 = new Bleeding();
         ps5.run();
     }
-
-
-
-
 }
-
-
 
 class IntegerScanner { // coded by Ian Leow, using any other I/O method is not recommended
     BufferedInputStream bis;
@@ -193,23 +184,26 @@ class IntegerScanner { // coded by Ian Leow, using any other I/O method is not r
     }
 }
 
+class IntegerPair implements Comparable <IntegerPair> {
+    Integer first;
+    Integer second;
 
-
-class IntegerPair implements Comparable < IntegerPair > {
-    Integer _first, _second;
-
-    public IntegerPair(Integer f, Integer s) {
-        _first = f;
-        _second = s;
+    public IntegerPair(Integer first, Integer second) {
+        this.first = first;
+        this.second = second;
     }
 
-    public int compareTo(IntegerPair o) {
-        if (!this.first().equals(o.first()))
-            return this.first() - o.first();
+    public int compareTo(IntegerPair incoming) {
+        if (!this.getsFirst().equals(incoming.getsFirst()))
+            return this.getsFirst() - incoming.getsFirst();
         else
-            return this.second() - o.second();
+            return this.getsSecond() - incoming.getsSecond();
     }
 
-    Integer first() { return _first; }
-    Integer second() { return _second; }
+    Integer getsFirst() { 
+        return this.first; 
+    }
+    Integer getsSecond() { 
+        return this.second; 
+    }
 }
