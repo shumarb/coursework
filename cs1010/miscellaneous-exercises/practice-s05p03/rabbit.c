@@ -12,7 +12,7 @@
 
 int countJumps(int [], int);
 void displaysArray(int [], int);
-void displaysLine();
+void displayLine();
 
 int main(void) 
 {
@@ -53,7 +53,7 @@ int countJumps(int rocks[], int size)
 	{
 		printf("* rocks_array: ");
 		displaysArray(rocks_array, rocks_array_size);
-		displaysLine();
+		displayLine();
 	}
 
 	current_rock = rocks_array[current_rock_index];
@@ -67,7 +67,7 @@ int countJumps(int rocks[], int size)
 				printf("* rocks_array: ");
 				displaysArray(rocks_array, rocks_array_size);
 				printf("* now at index %d, which is at opposite river bank\n", current_rock_index);
-				displaysLine();
+				displayLine();
 			}
 			break;
 		} 
@@ -85,7 +85,7 @@ int countJumps(int rocks[], int size)
 					printf("* rocks_array: ");
 					displaysArray(rocks_array, rocks_array_size);
 					printf("* impossible: current_rock: %d | next_rock: %d | difference: %d\n", current_rock, next_rock, (next_rock - current_rock));
-					displaysLine();
+					displayLine();
 				}
 				return -1;
 			}
@@ -104,7 +104,7 @@ int countJumps(int rocks[], int size)
 						printf("* rocks_array: ");
 						displaysArray(rocks_array, rocks_array_size);
 						printf("* jump to opposite_river_bank | current_rock: %d, opposite_river_bank: %d\n", current_rock, opposite_river_bank);
-						displaysLine();
+						displayLine();
 					}
 					num_jumps++;
 					break;
@@ -133,7 +133,7 @@ int countJumps(int rocks[], int size)
 								displaysArray(rocks_array, rocks_array_size);
 								printf("* current_rock: %d, next_rock: %d, rock_after_next_rock: %d\n", current_rock, next_rock, rock_after_next_rock);
 								printf("* currently at %d, jump to %d\n", current_rock, next_rock);
-								displaysLine();
+								displayLine();
 							}
 							current_rock_index = j;
 							current_rock = next_rock;
@@ -160,7 +160,7 @@ void displaysArray(int rocks_array[], int size)
 	printf("%d]\n", rocks_array[size - 1]);
 }
 
-void displaysLine()
+void displayLine()
 {
 	printf("-------------------------------------------------------------------------------------------------------------------------------------------------\n");
 }

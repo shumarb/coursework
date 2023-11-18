@@ -1,7 +1,7 @@
 // partition.c
 #include <stdio.h>
 
-void displaysLine();
+void displayLine();
 void sortsArrayByPivot(int [], int, int);
 void swapsElements(int [], int, int);
 void printArray(int [], int);
@@ -37,7 +37,7 @@ void swapsElements(int arr[], int firstIndex, int secondIndex)
 }
 
 // Displays line
-void displaysLine() 
+void displayLine() 
 {
 	printf("------------------------------------------------------------------\ns");
 }
@@ -50,10 +50,10 @@ void sortsArrayByPivot(int arr[], int size, int pivot)
 	int is_test = 0, left_pointer = 0, right_pointer = size - 1;
 
 	if (is_test) {
-		displaysLine();
+		displayLine();
 		printf("* Before sort: ");
 		printArray(arr, size);
-		displaysLine();
+		displayLine();
 	}
 
 	while (left_pointer <= right_pointer) {
@@ -85,7 +85,7 @@ void sortsArrayByPivot(int arr[], int size, int pivot)
 				printf("* swap: index %d with index %d\n", left_pointer, right_pointer);
 				printf("* so far, array after swap: ");
 				printArray(arr, size);
-				displaysLine();
+				displayLine();
 			}
 			swapsElements(arr, left_pointer++, right_pointer--);
 		}
