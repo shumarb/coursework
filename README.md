@@ -1,4 +1,4 @@
-# Programming Coursework
+# Coursework
 This repository contains my solutions to problem sets and assignments for these modules taught at the National University of Singapore:
 
 Module Information | Folder/Repository | Programming Language
