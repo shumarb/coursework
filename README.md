@@ -1,8 +1,10 @@
 # Coursework
-This repository contains my solutions to problem sets and assignments for these modules taught at the National University of Singapore:
+
+## Overview
+The repository contains my solutions for modules in the `Bachelor of Computing (Computer Science)` undergraduate program at the `National University of Singapore`.
 
 Module | Programming Language
------- | -------------
+------ | ---------------------
 [Programming Methodology](https://github.com/Sheikh-Umar/programming-coursework/tree/master/programming-methodology) | C
 [Data Structures & Algorithms 1](https://github.com/Sheikh-Umar/programming-coursework/tree/master/data-structures-and-algorithms-1) | Java
 [Data Structures & Algorithms 2](https://github.com/Sheikh-Umar/programming-coursework/tree/master/data-structures-and-algorithms-2) | Java
