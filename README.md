@@ -5,9 +5,9 @@ The repository contains my solutions for modules in the `Bachelor of Computing (
 
 Module | Programming Language
 ------ | ---------------------
-[Programming Methodology](https://github.com/Sheikh-Umar/programming-coursework/tree/master/programming-methodology) | C
-[Data Structures & Algorithms](https://github.com/Sheikh-Umar/programming-coursework/tree/master/data-structures-and-algorithms) | Java
+[Programming Methodology](https://github.com/Sheikh-Umar/coursework/tree/master/modulesmodules/programming-methodology) | C
+[Data Structures & Algorithms](https://github.com/Sheikh-Umar/coursework/tree/master/modulesdata-structures-and-algorithms) | Java
 [Software Engineering](https://github.com/Sheikh-Umar/cs2103) | Java
-[Operating Systems](https://github.com/Sheikh-Umar/programming-coursework/tree/master/operating-systems) | C
-[Design & Analysis of Algorithms](https://github.com/Sheikh-Umar/programming-coursework/tree/master/design-and-analysis-of-algorithms) | Java
-[Database Applications Design & Tuning](https://github.com/Sheikh-Umar/programming-coursework/tree/master/database-applications-design-and-tuning) | SQL, XML
+[Operating Systems](https://github.com/Sheikh-Umar/coursework/tree/master/modulesoperating-systems) | C
+[Design & Analysis of Algorithms](https://github.com/Sheikh-Umar/coursework/tree/master/modulesdesign-and-analysis-of-algorithms) | Java
+[Database Applications Design & Tuning](https://github.com/Sheikh-Umar/coursework/tree/master/modulesdatabase-applications-design-and-tuning) | SQL, XML
