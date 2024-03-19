@@ -5,5 +5,5 @@ This folder contains my solutions for the individual projects of the module [CS4
 
 Project
 ------- |
-[Fabian Pascal](https://github.com/shumarb/coursework/tree/master/database-applications-design-and-tuning/fabian-pascal)
-[TPCC](https://github.com/shumarb/coursework/tree/master/database-applications-design-and-tuning/tpcc)
+[Fabian Pascal](https://github.com/shumarb/coursework/tree/master/modules/database-applications-design-and-tuning/fabian-pascal)
+[TPCC](https://github.com/shumarb/coursework/tree/master/modules/database-applications-design-and-tuning/tpcc)

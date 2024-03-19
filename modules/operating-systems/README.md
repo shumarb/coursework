@@ -5,4 +5,4 @@ This folder contains my solutions for the lab assignments of the module [CS2106:
 
 Lab Assignment
 ----------------------------------------------------------------------------- |
-[1](https://github.com/shumarb/coursework/tree/master/operating-systems/lab-1)
+[1](https://github.com/shumarb/coursework/tree/master/modules/operating-systems/lab-1)
