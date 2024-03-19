@@ -9,5 +9,4 @@ Module | Programming Language
 [Data Structures & Algorithms](https://github.com/shumarb/coursework/tree/master/modules/data-structures-and-algorithms) | Java
 [Software Engineering](https://github.com/Sheikh-Umar/cs2103) | Java
 [Operating Systems](https://github.com/shumarb/coursework/tree/master/modules/operating-systems) | C
-[Design & Analysis of Algorithms](https://github.com/shumarb/coursework/tree/master/modules/design-and-analysis-of-algorithms) | Java
 [Database Applications Design & Tuning](https://github.com/shumarb/coursework/tree/master/modules/database-applications-design-and-tuning) | SQL, XML
