@@ -1,4 +1,4 @@
-# Data Structures & Algorithms 2
+# Data Structures & Algorithms II
 
 ## Overview
 This folder contains my solutions for the individual projects of the module `CS2010: Data Structures & Algorithms II`.
