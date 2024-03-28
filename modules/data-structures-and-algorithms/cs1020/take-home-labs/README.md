@@ -1,4 +1,4 @@
-# Data Structures & Algorithms 1
+# Data Structures & Algorithms I
 
 ## Overview
 This folder contains my solutions for the take-home lab assignments of the module `CS1020: Data Structures & Algorithms I`.
