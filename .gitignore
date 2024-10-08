@@ -23,3 +23,6 @@ __MACOSX
 *.jpg
 
 /target/
+
+# iml ###
+*.iml
