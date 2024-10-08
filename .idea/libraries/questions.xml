@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="questions">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/modules/database-applications-design-and-tuning/tpcc/downloads/questions.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
