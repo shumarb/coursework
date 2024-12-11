@@ -6,6 +6,7 @@
 
 # IDE specific (keep eclipse related mostly) ###
 #.vscode
+#.idea
 #.project
 #.classpath
 #.settings
