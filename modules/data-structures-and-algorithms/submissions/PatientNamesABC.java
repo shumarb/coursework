@@ -1,4 +1,4 @@
-// Copy paste this Java Template and save it as "PatientNames.java"
+// Copy paste this Java Template and save it as "PatientNamesABC.java"
 import java.io.*;
 import java.util.*;
 

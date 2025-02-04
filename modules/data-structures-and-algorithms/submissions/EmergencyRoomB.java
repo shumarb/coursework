@@ -1,4 +1,4 @@
-// Copy paste this Java Template and save it as "EmergencyRoom.java"
+// Copy paste this Java Template and save it as "EmergencyRoomA.java"
 import java.util.*;
 import java.io.*;
 

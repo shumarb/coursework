@@ -1,4 +1,4 @@
-// Copy paste this Java Template and save it as "Supermarket.java"
+// Copy paste this Java Template and save it as "SupermarketA.java"
 import java.io.*;
 import java.util.*;
 

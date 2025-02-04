@@ -1,5 +1,5 @@
 // Copy paste this Java Template and save it as
-// "HospitalRenovation.java"
+// "HospitalRenovationABC.java"
 import java.util.*;
 
 // write your matric number here: A0149874L

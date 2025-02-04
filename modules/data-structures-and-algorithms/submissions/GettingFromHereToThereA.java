@@ -1,5 +1,5 @@
 // Copy paste this Java Template and save it as
-// "GettingFromHereToThere.java"
+// "GettingFromHereToThereA.java"
 import java.io.*;
 
 // write your matric number here: A0149874L
